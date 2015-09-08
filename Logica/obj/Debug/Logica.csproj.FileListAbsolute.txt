@@ -1,0 +1,14 @@
+C:\Users\Guty\Desktop\Supervision\Supervicion\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Guty\Desktop\Supervision\Supervicion\Logica\bin\Debug\Logica.dll
+C:\Users\Guty\Desktop\Supervision\Supervicion\Logica\bin\Debug\Logica.pdb
+C:\Users\Guty\Desktop\Supervision\Supervicion\Logica\bin\Debug\Datos.dll
+C:\Users\Guty\Desktop\Supervision\Supervicion\Logica\bin\Debug\Datos.pdb
+C:\Users\Guty\Desktop\Supervision\Supervicion\Logica\obj\Debug\Logica.dll
+C:\Users\Guty\Desktop\Supervision\Supervicion\Logica\obj\Debug\Logica.pdb
+C:\Users\Gustavo\Desktop\Supervisor\Logica\bin\Debug\Logica.dll
+C:\Users\Gustavo\Desktop\Supervisor\Logica\bin\Debug\Logica.pdb
+C:\Users\Gustavo\Desktop\Supervisor\Logica\bin\Debug\Datos.dll
+C:\Users\Gustavo\Desktop\Supervisor\Logica\bin\Debug\Datos.pdb
+C:\Users\Gustavo\Desktop\Supervisor\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo\Desktop\Supervisor\Logica\obj\Debug\Logica.dll
+C:\Users\Gustavo\Desktop\Supervisor\Logica\obj\Debug\Logica.pdb
