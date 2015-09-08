@@ -22,10 +22,21 @@ namespace Supervisor
                                     Request.QueryString["Categoria_E2"], Request.QueryString["Categoria_E3"], Request.QueryString["Categoria_F1"], Request.QueryString["Categoria_F2"], Request.QueryString["Categoria_F3"],
                                     Request.QueryString["Categoria_G1"], Request.QueryString["Categoria_G2"], Request.QueryString["Categoria_G3"], Request.QueryString["Tipo"]); // carga las variables de la URL                
             Caduco_Session();
-            Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-            Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-            Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+            Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+            Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+            Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
 
+        }
+
+        protected void Volver_A_Consola_Click(object sender, EventArgs e)
+        {
+            Session.Clear(); // limpiar todas las variables de sesion del usuario
+            Session.Abandon(); // abandonar las variables de sesion (esto se realiza con el fin de asegurarme que borro la session del usuario  
+            Eliminar_Cookie(); // cerrar las variables de coockie
+            Response.Redirect("index.aspx");
         }
 
         public void Cargar_Variables_De_URL(string A1, string A2, string A3, string B1, string B2, string B3, string C1, string D1, string D2, string E1, string E2, string E3, string F1, string F2, string F3, string G1, string G2, string G3, string Tipo)

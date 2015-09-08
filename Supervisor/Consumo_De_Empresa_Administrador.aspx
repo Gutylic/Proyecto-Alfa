@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Consumo_De_Empresa_Administrador.aspx.cs" Inherits="Supervisor.Consumo_De_Empresa_Administrador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Consumo_De_Empresa_Administrador.aspx.cs" EnableEventValidation="false" Inherits="Supervisor.Consumo_De_Empresa_Administrador" %>
 
 <!DOCTYPE html>
 

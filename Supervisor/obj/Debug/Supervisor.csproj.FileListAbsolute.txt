@@ -19,3 +19,14 @@ C:\Users\Gustavo\Desktop\Supervisor\Supervisor\bin\Logica.pdb
 C:\Users\Gustavo\Desktop\Supervisor\Supervisor\obj\Debug\Supervisor.csprojResolveAssemblyReference.cache
 C:\Users\Gustavo\Desktop\Supervisor\Supervisor\obj\Debug\Supervisor.dll
 C:\Users\Gustavo\Desktop\Supervisor\Supervisor\obj\Debug\Supervisor.pdb
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\bin\Supervisor.dll.config
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\bin\Supervisor.dll
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\bin\Supervisor.pdb
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\bin\AjaxControlToolkit.dll
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\bin\Datos.dll
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\bin\Logica.dll
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\bin\Datos.pdb
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\bin\Logica.pdb
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\obj\Debug\Supervisor.csprojResolveAssemblyReference.cache
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\obj\Debug\Supervisor.dll
+C:\Users\Maria\Desktop\Proyecto-Alfa\Proyecto-Alfa\Supervisor\obj\Debug\Supervisor.pdb

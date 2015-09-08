@@ -52,8 +52,8 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-3"></div>
-                    <div class="col-xs-6">
+                    <div class="col-md-3 hidden-xs"></div>
+                    <div class="col-md-6 col-xs-12">
            
                         <div class="panel caracteristicas_panel">
                             <div class="panel-heading caracteristicas_heading">Ingrese su Clave</div>
@@ -109,7 +109,7 @@
 
                         </div>
         
-                        <div class="col-xs-3"></div>
+                        <div class="col-md-3 hidden-xs" ></div>
 
                     </div>
                 </div>

@@ -142,6 +142,7 @@
     <Content Include="css\empresas_dios.css" />
     <Content Include="css\empresas_administrador.css" />
     <Content Include="css\empresas_supervisor.css" />
+    <Content Include="css\encabezado.css" />
     <Content Include="css\enunciado_por_clave.css" />
     <Content Include="css\enunciado_por_fichas.css" />
     <Content Include="css\enunciado_por_institucion.css" />
