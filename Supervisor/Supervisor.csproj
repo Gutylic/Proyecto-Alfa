@@ -133,6 +133,7 @@
     <Content Include="css\comentario_usuario_administrador.css" />
     <Content Include="css\comentario_usuario_dios.css" />
     <Content Include="css\comentario_usuario_supervisor.css" />
+    <Content Include="css\consola_de_control.css" />
     <Content Include="css\consumo_de_empresa_dios.css" />
     <Content Include="css\consumo_de_empresa_administrador.css" />
     <Content Include="css\consumo_de_empresa_supervisor.css" />
@@ -156,7 +157,6 @@
     <Content Include="css\movimiento_supervisor.css" />
     <Content Include="css\panel_de_control_administrador.css" />
     <Content Include="css\index.css" />
-    <Content Include="css\consola_de_control.css" />
     <Content Include="css\panel_de_control_dios.css" />
     <Content Include="css\panel_de_control_supervisor.css" />
     <Content Include="css\panel_de_control_usuario_administrador.css" />
