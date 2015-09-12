@@ -1,138 +1,167 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400);
-body {
-  background-color:#e0e0e0;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
-}
-.navbar-default {background-color:#f4f4f4;margin-top:50px;border-width:0;z-index:5;}
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {border:0 solid #4285f4;border-bottom-width:2px;font-weight:800;background-color:transparent;}
-.navbar-default .dropdown-menu {background-color:#ffffff;}
+﻿
 
 
-
-.fondo {
-    color: #fff;
-    background-color: #6D4A70;
-    border-color: #ddd;
+h4.control-label.clases {
+    font-size: 10px;
 }
 
-div.cerrar_session {
-    text-align:right;
-    margin-top:30px;
-
+.col-xs-9.Admin {
+    margin-top: 7px;
 }
 
-
-#Volver_A_Consola {
-    font-weight: bolder;
-    font-size: 23px;
-    color: white;
-   
-    text-decoration: none;
+span#Etiqueta_Nombre {
+    font-size: 12px;
 }
 
-div.consola_de_control {
-    margin-top:6px;
-    text-align:center;
+input#TextBox_Password {
+    font-size: 12px;
 }
 
-div.ip {
-    margin-top:-27px;
-    color:white;
+.col-xs-9.Password {
+    margin-left: -10px;
+    margin-top: 5px;
 }
 
-div.hora {
-    margin-top:-8px;
-    color:white
+.encabezado_panel.panel-heading.fondo {
+    height: 30px;
 }
 
-h1.titulo {
-    color:white;
+h2.datos_del_administrador {
+    font-size: 12px;
+    margin-top: 1px;
 }
 
-div.administrador {
-    margin-top:23px;
+h6.pie {
+    margin-top: -10px;
 }
 
-#Etiqueta_Administrador {
-    color:white;
-    font-size:18px;
-
+input#Boton_Actualizar_Administrador {
+    font-size: 12px;
 }
 
-.fondo_encabezado {
-    background:#6D4A70;
-    height:92px;
+/*-------------------------------------------------------------media query 768 --------------------------------------------------------------*/
+
+
+@media (min-width:768px) {
+
+.encabezado_panel.panel-heading.fondo {
+    height: 35px;
 }
 
-hr {border-color:#ececec;}
-
-button {
- outline: 0;
-}
-
-textarea {
- resize: none;
- outline: 0; 
+h2.datos_del_administrador {
+    font-size: 16px;
+    margin-top: -1px;
 }
 
 
-
-
-
-.modal-footer {
- border-width:0;
-}
-.dropdown-menu {
- background-color:#f4f4f4;
- border-color:#f0f0f0;
- border-radius:0;
- margin-top:-1px;
-}
-/* end theme */
-
-/* template layout*/
-#subnav {
- position:fixed;
- width:100%;
+h4.control-label.clases {
+    font-size: 14px;
 }
 
-@media (max-width: 768px) {
- #subnav {
-  padding-top: 6px;
- }
+.col-xs-9.Admin {
+    margin-top: 8px;
+    margin-left: -80px;
 }
 
-#main {
- padding-top:120px;
+span#Etiqueta_Nombre {
+    font-size: 16px;
+}
+
+.col-xs-9.Password {
+    margin-left: -90px;
+    margin-top: 5px;
+}
+
+input#TextBox_Password {
+    font-size: 15px;
+}
+
+input#Boton_Actualizar_Administrador {
+    font-size: 16px;
 }
 
 
-h4.datos_del_administrador {
-    text-align:center;
 
 }
 
-.clases {
-    margin-top:20px;
+
+/*-------------------------------------------------------------media query 992 --------------------------------------------------------------*/
+
+
+@media (min-width:992px) {
+
+.encabezado_panel.panel-heading.fondo {
+    height: 40px;
 }
 
-#Etiqueta_Nombre {
-    margin-top:20px;
-    margin-left:23px;
-}
-#Etiqueta_Categoria {
-    margin-top:20px;
-    margin-left:23px;
-}
-#TextBox_Password {
-    padding-left:23px;
-    margin-top:10px;
-    width:100%;
-    height:36px;
+h2.datos_del_administrador {
+    font-size: 18px;
+    margin-top: -1px;
 }
 
-div.encabezado_panel {
-    background-color:#4285F4;
+h4.control-label.clases {
+    font-size: 16px;
 }
 
+span#Etiqueta_Nombre {
+    font-size: 18px;
+}
+
+input#TextBox_Password {
+    font-size: 17px;
+}
+
+input#Boton_Actualizar_Administrador {
+    font-size: 18px;
+}
+
+.col-xs-9.Admin {
+    margin-left: -120px;
+}
+
+.col-xs-9.Password {
+    margin-left: -130px;
+}
+
+}
+
+/*-------------------------------------------------------------media query 1200 --------------------------------------------------------------*/
+
+
+@media (min-width:1200px) {
+
+.encabezado_panel.panel-heading.fondo {
+    height: 45px;
+}
+
+h2.datos_del_administrador {
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+h4.control-label.clases {
+    font-size: 18px;
+}
+
+span#Etiqueta_Nombre {
+    font-size: 19px;
+}
+
+input#TextBox_Password {
+    font-size: 19px;
+}
+
+input#Boton_Actualizar_Administrador {
+    font-size: 20px;
+}
+
+.col-xs-9.Admin {
+    margin-left: -150px;
+}
+
+.col-xs-9.Password {
+    margin-left: -150px;
+}
+
+
+}
