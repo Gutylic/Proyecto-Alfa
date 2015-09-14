@@ -10,10 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/encabezado.css" rel="stylesheet" />
     <link href="css/movimiento_administrador.css" rel="stylesheet"/>
     
     <title>Movimientos de Usuarios</title>
-
+    <style>
+        th {
+            text-align:center;
+            padding: 1px;
+            font-weight: normal;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,35 +33,45 @@
 
              <nav class="navbar navbar-fixed-top header fondo_encabezado">
  	            <div class="container"> 
-                    <div class="col-md-12">                       
-                        <div class="row">
-                            <div class="col-xs-4 administrador">
-                                <asp:Label ID="Etiqueta_Administrador" runat="server" Text=""></asp:Label>
-                            </div>
-                            <div class="col-xs-4 consola_de_control" style="text-align:center">
-                                <h1 class="titulo">Empresa</h1>
-                            </div> 
-                            <div class="col-xs-4 cerrar_session">                             
-                                <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click"><< Volver</asp:LinkButton>
-                            </div>
-                        </div>                    
-                        <div class="row">
-                            <div class="col-xs-4 ip">
-                                <asp:Label ID="Etiqueta_Localizador" runat="server" ></asp:Label>
-                            </div>
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>                                             
+                                         
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs administrador" >
+                            <asp:Label ID="Administrador_chico" runat="server" Text="">Adm:</asp:Label>
+                            <asp:Label ID="Etiqueta_Administrador_Chico" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-4 hora">                         
-                                <asp:Label ID="Etiqueta_Hora" runat="server" ></asp:Label>
-                            </div>
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>
+                        <div class="col-xs-12 hidden-xs administrador">
+                            <asp:Label ID="Administrador_grande" runat="server" Text="">Administrador:</asp:Label>
+                            <asp:Label ID="Etiqueta_Administrador_Grande" CssClass ="etiqueta_administrador_grande" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 visible-xs ip chico">
+                            <asp:Label ID="Localizador_chico" runat="server">Conectado:</asp:Label>
+                            <asp:Label ID="Etiqueta_Localizador_Chico" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="col-xs-4 hidden-xs ip chico">
+                            <asp:Label ID="Localizador_Grande" runat="server">Conectado:</asp:Label>
+                            <asp:Label ID="Etiqueta_Localizador_Grande" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="col-xs-4 consola_de_control" style="text-align:center; ">
+                            <h1 class="titulo">Insertar</h1>
+                        </div>
+                        <div class="col-xs-4 cerrar_session">                             
+                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click">X</asp:LinkButton>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs hora_chica_num" >
+                            <asp:Label ID="Hora_chico" runat="server" >Hora:</asp:Label>
+                            <asp:Label ID="Etiqueta_Hora_Chica" runat="server" ></asp:Label>
+                        </div>
+                        <div class="col-xs-12 hidden-xs hora_grande" >
+                            <asp:Label ID="Hora_grande" runat="server" >Hora de Conexión:</asp:Label>
+                            <asp:Label ID="Etiqueta_Hora_Grande" runat="server" ></asp:Label>
                         </div>
                     </div>
                 </div>
-            </nav>
+             </nav>
 
         </div>
 
@@ -68,31 +85,48 @@
                     <asp:UpdatePanel ID="UpdatePanel_Botonera" runat="server">   
                         <ContentTemplate>   
                             <div class="panel panel-default">                                                            
-                                <div class="encabezado_panel panel-heading fondo" style="height:150px; text-align:center">
+                                <div class="encabezado_panel panel-heading fondo">
                                     <h2 class="datos_del_administrador">Movimientos Realizados</h2>
-                                    <hr />
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="Buscar_Administrador" Width="100%" Height="36px" runat="server"></asp:TextBox>
+                                    <hr/>
+                                    <div class="col-xs-6 buscar_administrador">
+                                        <asp:TextBox ID="Buscar_Administrador"  runat="server"></asp:TextBox>
                                     </div>
                                     <div class="col-xs-6">
                                         <asp:Button ID="Boton_Buscar_Administrador" runat="server" CssClass="btn btn-primary" Width="100%" Text="Buscar" OnClick="Boton_Buscar_Administrador_Click" />
                                     </div>
                                 </div>
-                                <div class="panel-body" runat="server" id="Formulario">
+                                <div class="panel-body" runat="server" id="Formulario" style ="padding: 1px">
                                     
                                     <div class="row">
                                         <div class="col-xs-12">
                                             
-                                            <asp:GridView ID="GridView_Administrador" Width="100%" GridLines="None" runat="server" AutoGenerateColumns="false" >
+                                            <asp:GridView ID="GridView_Administrador" GridLines="Both" Font-Bold="false" runat="server" AutoGenerateColumns="False" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" >
+                                                <AlternatingRowStyle BackColor="White" />
                                                 <Columns>
                                                 
-                                                    <asp:BoundField DataField="Usuario" HeaderText="Usuario" />
-                                                    <asp:BoundField DataField="Fecha_Del_Movimiento" HeaderText="Fecha del Movimiento" />
-                                                    <asp:BoundField DataField="Descripcion_De_Movimiento" HeaderText="Movimiento" />                  
-                                                    <asp:BoundField DataField="Plata_Debe" HeaderText="Debe" DataFormatString="{0:c}"/>  
-                                                    <asp:BoundField DataField="Plata_Haber" HeaderText="Haber" DataFormatString="{0:c}"/>                  
+                                                    <asp:BoundField DataField="Usuario" ItemStyle-VerticalAlign="Middle" HeaderText="Usuario">
+                                                    <ItemStyle VerticalAlign="Middle" HorizontalAlign="Center" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Fecha_Del_Movimiento" ItemStyle-VerticalAlign="Middle" DataFormatString="{0:d}" HeaderText="Fecha" > 
+                                                    <ItemStyle VerticalAlign="Middle" HorizontalAlign="Center" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Descripcion_De_Movimiento" ItemStyle-VerticalAlign="Middle" HeaderText="Movimiento" >                  
+                                                    <ItemStyle VerticalAlign="Middle" HorizontalAlign="Center" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Plata_Debe" HeaderText="Debe" ItemStyle-VerticalAlign="Middle" DataFormatString="{0:c}">  
+                                                    <ItemStyle VerticalAlign="Middle" HorizontalAlign="Center"/>
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Plata_Haber" HeaderText="Haber" ItemStyle-VerticalAlign="Middle" DataFormatString="{0:c}">                  
+                                                
+                                                    <ItemStyle VerticalAlign="Middle" HorizontalAlign="Center"/>
+                                                    </asp:BoundField>
                                                 
                                                 </Columns>
+                                                
+                                                <HeaderStyle BackColor="steelblue" Font-Bold="false" ForeColor="White" />
+                                                
+                                                <RowStyle BackColor="lavender" />
+                                                
                                         </asp:GridView>
                                         
                                         </div>
@@ -126,10 +160,10 @@
                 <footer>
                    <div class="container">            
                         <div class="row">
-                            <div class="col-xs-6">
-                                <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
+                            <div class="col-xs-12">
+                                <h6 class="pie">Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
                             </div>
-                            <div class="col-xs-6"></div>
+                            
                         </div>
                     </div>             
                 </footer>
