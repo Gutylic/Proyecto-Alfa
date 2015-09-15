@@ -92,6 +92,7 @@
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Aumento en la Duración de la Compra" Value="13" Enabled="false"></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;2 x 1 en Impresiones" Value="14" Enabled="false" ></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;2 x 1 en Explicaciones" Value = "15" Enabled="false"></asp:ListItem>
+                                    <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Sin Ofertas" Value = "16" ></asp:ListItem>
                                 </asp:RadioButtonList>                                                                                                 
                             </div>
                             <div class="form-group otras_opciones" >
