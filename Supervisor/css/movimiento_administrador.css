@@ -1,7 +1,12 @@
 ﻿.encabezado_panel.panel-heading.fondo {
     text-align: center;
-    height: 95px;
+    height: 85px;
 
+}
+
+hr {
+    border-color: #ececec;
+    margin-top: 0px;
 }
 
 h6.pie {
@@ -36,6 +41,8 @@ table#GridView_Administrador {
     font-size: 10px;
 }
 
+
+
 /*-------------------------------------------------------------media query 768 --------------------------------------------------------------*/
 
 
@@ -44,6 +51,10 @@ table#GridView_Administrador {
 .encabezado_panel.panel-heading.fondo {
     height: 35px;
 }
+
+    hr {
+        margin-top: 70px;
+    }
 
     h2.datos_del_administrador {
         font-size: 15px;
