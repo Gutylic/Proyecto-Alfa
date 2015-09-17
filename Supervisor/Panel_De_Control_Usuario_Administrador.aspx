@@ -117,16 +117,16 @@
                                         <div class="col-xs-7"><asp:Label ID="Modelo_Administrador" runat="server" Width="100%" Height="36px"></asp:Label>  </div>
                                     </div>  
                                     <div class="row">
-                                        <div class="col-xs-5"><h4>Crédito del Usuario en $:</h4></div>
+                                        <div class="col-xs-5"><h4>Crédito del Usuario:</h4></div>
                                         <div class="col-xs-7"><asp:Label ID="Credito_Administrador" runat="server" Width="100%" Height="36px"></asp:Label></div>
                                     </div>  
                                     <div class="row">
-                                        <div class="col-xs-5"><h4>Préstamo Otorgado:</h4></div>
-                                        <div class="col-xs-7"><asp:CheckBox class="checkbox" ID="CheckBox_Prestamo_Administrador" runat="server" Enabled="false" /></div>
+                                        <div class="col-xs-5 "><h4>Préstamo Otorgado:</h4></div>
+                                        <div class="col-xs-7 prestamo_administrador"><asp:CheckBox class="checkbox" ID="CheckBox_Prestamo_Administrador" runat="server" Enabled="false" /></div>
                                     </div>  
                                     <div class="row">
                                         <div class="col-xs-5"><h4>Activación de Usuario:</h4></div>
-                                        <div class="col-xs-7"><asp:CheckBox class="checkbox" ID="CheckBox_Activacion_Administrador" runat="server" Enabled="false" /></div>
+                                        <div class="col-xs-7 activacion_administrador"><asp:CheckBox class="checkbox" ID="CheckBox_Activacion_Administrador" runat="server" Enabled="false" /></div>
                                     </div>                                   
                                  </div>  
                              </div>                 
@@ -139,10 +139,10 @@
         <footer>
             <div class=" container">
                 <div class="row">
-                    <div class="col-xs-6">
-                        <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
+                    <div class="col-xs-12">
+                        <h6 class="pie">Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
                     </div>
-                    <div class="col-xs-6"></div>
+                    
                 </div>
             </div>
         </footer>
