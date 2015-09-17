@@ -128,16 +128,16 @@
                             <div class="panel-body cuerpo_del_panel">                
                                 <div class="row">  
                                     <div class="col-sm-12">
-                                        <asp:GridView ID="GridView_Supervisor" Width="100%" GridLines="Both" Font-Bold="false" BorderColor="#DEDFDE" BorderWidth="1px" BorderStyle="None" runat="server" OnSelectedIndexChanged="Identificador_Supervisor" DataKeyNames="ID_Administrador" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" >
+                                        <asp:GridView ID="GridView_Supervisor" Width="100%" GridLines="Both" CssClass="gridview" Font-Bold="false" BorderColor="#DEDFDE" BorderWidth="1px" BorderStyle="None" runat="server" OnSelectedIndexChanged="Identificador_Supervisor" DataKeyNames="ID_Administrador" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" >
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Administrador:">
+                                                <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Administrador">
                                                     <ItemTemplate>
                                                         <asp:LinkButton ID="Seleccionar_Supervisor" CommandName="Select"  CommandArgument="<%#((GridViewRow)Container).RowIndex %>" runat="server"><%# Eval ("Administrador") %></asp:LinkButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
-                                                <asp:BoundField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" DataField="IP_Address" HeaderText="Dirección IP:" />                  
-                                                <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Bloqueo:">
+                                                <asp:BoundField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" DataField="IP_Address" HeaderText="Dirección IP" />                  
+                                                <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Bloqueo">
                                                     <ItemTemplate>
                                                         <asp:CheckBox ID="CheckBox_Bloqueo_Supervisor" runat="server" Enabled="false" Checked='<%# Eval ("Administrador_Bloqueado") %>' />
                                                     </ItemTemplate>
@@ -179,29 +179,33 @@
                                 <div class="panel-body">
                                     <form class="form-horizontal">
                                         <div class="form-group">
-                                            <label class="col-xs-12 control-label formulario">Administrador:</label>
-                                            <div class="col-xs-12">
+                                            <label class="col-xs-6 control-label formulario">Administrador:</label>
+                                            <div class="col-xs-6">
                                                 <asp:TextBox ID="Administrador_Supervisor" Width="100%"  runat="server"></asp:TextBox>      
                                             </div>
                                         </div>                                    
                                         <div class="form-group">
-                                            <label class="col-xs-12 control-label formulario">Password:</label>
-                                            <div class="col-xs-12">
+                                            <label class="col-xs-6 control-label formulario">Password:</label>
+                                            <div class="col-xs-6">
                                                 <asp:TextBox ID="Password_Supervisor" runat="server" Width="100%" MaxLength="10"></asp:TextBox>
                                             </div>
                                         </div>                                    
                                         <div class="form-group">
-                                            <label class="col-xs-12 control-label formulario">Dirección IP:</label>
-                                            <div class="col-xs-12">
+                                            <label class="col-xs-6 control-label formulario">Dirección IP:</label>
+                                            <div class="col-xs-6">
                                                 <asp:Label ID="IP_Supervisor" runat="server" Width="100%"></asp:Label>                                            
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <label class=" control-label formulario bloqueado" >Bloqueado:                                        
-                                                    <asp:CheckBox class="checkbox" ID="CheckBox_Bloqueo_Supervisor" runat="server" />   
-                                                </label>
-                                            </div>                                                                              
+                                            <label class="col-xs-6 control-label formulario">Bloqueado:</label>
+                                                <div class="col-xs-6 ">
+                                                    <asp:CheckBox class="checkbox" ID="CheckBox_Bloqueo_Supervisor" runat="server" />                                                          
+                                                </div>
+                                            
+                                                <%--<label class=" control-label formulario " >Bloqueado:  --%>                                      
+                                                    
+                                               
+                                                                                                                      
                                         </div>                
                                     </form>
                                 </div>
