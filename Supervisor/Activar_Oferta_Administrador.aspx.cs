@@ -32,53 +32,71 @@ namespace Supervisor
             {
                 List<Mostrar_Activar_Oferta_AdministracionResult> Datos = LBAOA.Logica_Mostrar_Activar_Ofertas((int)Session["Variable_ID_Empresa"]); // carga los datos del administrador elegido por el supervisor
 
-                if (Datos[0].Oferta_2) 
+                bool Oferta_16 = true;
+
+                if (Datos[0].Oferta_2)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "2";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_3)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "3";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_5)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "5";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_7)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "7";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_8)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "8";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_9)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "9";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_10)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "10";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_11)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "11";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_12)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "12";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_13)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "13";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_14)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "14";
+                    Oferta_16 = false;
                 }
                 if (Datos[0].Oferta_15)
                 {
                     RadioButtonList_Ofertas_Administrador.SelectedValue = "15";
+                    Oferta_16 = false;
+                }
+                if (Oferta_16)
+                {
+                    RadioButtonList_Ofertas_Administrador.SelectedValue = "16";
                 }
                 if (Datos[0].Oferta_1)
                 {

@@ -24,13 +24,16 @@ namespace Supervisor
             {
                 Response.Redirect("sefue.aspx");
             }
-            
+
 
             if (!Page.IsPostBack) // se carga la primera vez al abrir la pagina
             {
-                Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-                Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-                Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();                               
+                Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+                Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+                Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+                Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+                Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+                Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
             }
 
             if (LBPDCS.Logica_Contar_Administradores((string)Session["Empresa"], (string)Session["Administrador"]) == null)
@@ -145,7 +148,7 @@ namespace Supervisor
             List<Seleccionar_Administradores_SupervisorResult> Datos = LBPDCS.Logica_Seleccionar_Administradores((int)Session["ID_Administrador"]); // carga los datos del administrador elegido por el supervisor
             Administrador_Supervisor.Text = Datos[0].Administrador; // carga el administrador de la base
             Password_Supervisor.Text = Datos[0].Password; // carga el password de la base
-            
+
             IP_Supervisor.Text = Datos[0].IP_Address; // carga el IP de la base este ip corresponde desde la ubicacion que se bloqueo el administrador
             CheckBox_Bloqueo_Supervisor.Checked = Datos[0].Administrador_Bloqueado; // carga de la base si el administrador esta bloqueado
         }
@@ -159,7 +162,7 @@ namespace Supervisor
             {
                 ScriptManager.RegisterClientScriptBlock(Page, typeof(string), "", "alert('Error en algunos datos insertados');", true);
                 return;
-            }           
+            }
             int Valor = LBPDCS.Logica_Actualizar_Administradores((int)Session["ID_Administrador"], (string)Session["Empresa"], Administrador_Supervisor.Text, Password_Supervisor.Text, IP_Supervisor.Text, CheckBox_Bloqueo_Supervisor.Checked);
             if (Valor == 0) // captura el error de que existe en la empresa un usuario con ese nick
             {
@@ -167,7 +170,6 @@ namespace Supervisor
                 return;
             }
             string alerta = @"alert('Administrador / Supervisor actualizado correctamente'); 
-
                 window.location.reload();";
 
             ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
@@ -185,7 +187,7 @@ namespace Supervisor
                     ScriptManager.RegisterClientScriptBlock(Page, typeof(string), "", "alert('Error en algunos datos insertados');", true);
                     return;
                 }
-                
+
                 int Valor = LBPDCS.Logica_Insertar_Administradores(Administrador_Supervisor.Text, Password_Supervisor.Text, (string)Session["Empresa"]); // analiza la insercion
                 if (Valor == 0) // captura el error de que el nick ya existe
                 {
@@ -196,18 +198,18 @@ namespace Supervisor
                 Formulario_Supervisor.Visible = true;
                 Boton_Nuevo_Supervisor.Text = "Nuevo";
                 return;
-                
+
             }
 
             if (Boton_Nuevo_Supervisor.Text == "Nuevo")
             {
                 Boton_Nuevo_Supervisor.Text = "Insertar";
                 Administrador_Supervisor.Text = string.Empty;
-                Password_Supervisor.Text = string.Empty;                
+                Password_Supervisor.Text = string.Empty;
                 IP_Supervisor.Text = string.Empty;
                 CheckBox_Bloqueo_Supervisor.Checked = false;
             }
-            
+
         }
 
         protected void Boton_Borrar_Supervisor_Click(object sender, EventArgs e)
@@ -216,7 +218,6 @@ namespace Supervisor
             if (Valor == 1) // todo ok
             {
                 string alerta = @"alert('Administrador / Supervisor borrado correctamente'); 
-
                 window.location.reload();";
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);

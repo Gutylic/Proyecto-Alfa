@@ -80,6 +80,7 @@
                         <div class="panel-body">                
                             <div class="form-group otras_opciones">                            
                                 <asp:RadioButtonList CellSpacing="5" ID="RadioButtonList_Ofertas_Administrador" runat="server">
+                                    
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Bonificación por Carga" Value="2" Enabled="false" ></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Descuento en la Segunda Compra" Value="3" Enabled="false"></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Descuento en la Compra" Value = "5" Enabled="false"></asp:ListItem>
@@ -92,6 +93,8 @@
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Aumento en la Duración de la Compra" Value="13" Enabled="false"></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;2 x 1 en Impresiones" Value="14" Enabled="false" ></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;2 x 1 en Explicaciones" Value = "15" Enabled="false"></asp:ListItem>
+                                    <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Sin Ofertas" Value = "16"  Enabled="false"></asp:ListItem>
+
                                 </asp:RadioButtonList>                                                                                                 
                             </div>
                             <div class="form-group otras_opciones" >
