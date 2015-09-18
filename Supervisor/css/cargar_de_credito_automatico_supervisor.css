@@ -1,137 +1,195 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400);
-body {
-  background-color:#e0e0e0;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
-}
-.navbar-default {background-color:#f4f4f4;margin-top:50px;border-width:0;z-index:5;}
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {border:0 solid #4285f4;border-bottom-width:2px;font-weight:800;background-color:transparent;}
-.navbar-default .dropdown-menu {background-color:#ffffff;}
-
-
-
-.fondo {
-    color: #fff;
-    background-color: #6D4A70;
-    border-color: #ddd;
+﻿h2.titulos {
+    font-size: 20px;
+    margin-top:-10px;
 }
 
-div.cerrar_session {
-    text-align:right;
-    margin-top:30px;
-
+.cabezera {
+    height:20px;
 }
 
-
-#Volver_A_Consola {
-    font-weight: bolder;
-    font-size: 23px;
-    color: white;
-    margin-right: 100px;
-    text-decoration: none;
+hr.linea {
+    margin-top: 0px;
 }
 
-div.consola_de_control {
-    margin-top:6px;
-
+h3.etiqueta {
+    font-size: 15px;
+    margin-top: 2px;
+    float:left;
 }
 
-div.ip {
-    margin-top:-27px;
-    color:white;
+input#Cuenta_Digital_Supervisor {    
+    padding-left: 3px;
+    margin-top:-2px;
 }
 
-div.hora {
-    margin-top:-8px;
-    color:white
+input#PayPal_Supervisor {
+    padding-left: 3px;
+    margin-top:-2px;
 }
 
-h1.titulo {
-    color:white;
-}
-
-div.administrador {
-    margin-top:23px;
-}
-
-#Etiqueta_Administrador {
-    color:white;
-    font-size:18px;
-
-}
-
-.fondo_encabezado {
-    background:#6D4A70;
-    height:92px;
-}
-
-hr {border-color:#ececec;}
-
-button {
- outline: 0;
-}
-
-textarea {
- resize: none;
- outline: 0; 
+input#Conversion_Dolares_A_Pesos {
+    padding-left: 3px;
+    margin-top:-2px;
 }
 
 
 
-
-
-.modal-footer {
- border-width:0;
-}
-.dropdown-menu {
- background-color:#f4f4f4;
- border-color:#f0f0f0;
- border-radius:0;
- margin-top:-1px;
-}
-/* end theme */
-
-/* template layout*/
-#subnav {
- position:fixed;
- width:100%;
+input#Boton_Cuenta_Digital_Supervisor {
+    height: 25px;
+    font-size: 12px;
+    padding-top: 3px;
 }
 
-@media (max-width: 768px) {
- #subnav {
-  padding-top: 6px;
- }
+input#Boton_PayPal_Supervisor {
+    height: 25px;
+    font-size: 12px;
+    padding-top: 3px;
 }
 
-#main {
- padding-top:120px;
+input#Button_MercadoPago_Supervisor {
+    height: 25px;
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+/*-------------------------------------------------------------media query 768 --------------------------------------------------------------*/
+
+
+@media (min-width:768px) {
+
+    h2.titulos {
+        font-size: 22px;
+        margin-top:-10px;
+    }
+
+.cabezera {
+    height:20px;
+}
+
+hr.linea {
+    margin-top: 0px;
+}
+
+h3.etiqueta {
+    font-size: 16px;
+    margin-top: 2px;
+    float:left;
+}
+
+input#Cuenta_Digital_Supervisor {    
+    padding-left: 4px;
+    margin-top: -10px;
+    height: 30px;
+}
+
+input#PayPal_Supervisor {
+    padding-left: 3px;
+    margin-top: -10px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+input#Conversion_Dolares_A_Pesos {
+    padding-left: 3px;
+    margin-top: -10px;
+    height: 30px;
+}
+
+input#Boton_Cuenta_Digital_Supervisor {
+    height: 30px;
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+input#Boton_PayPal_Supervisor {
+    height: 30px;
+    font-size: 14px;
+    padding-top: 4px;
+}
+
+input#MercadoPago_Supervisor {
+    padding-left: 3px;
+    margin-top: -10px;
+    height: 30px;
+}
+
+input#Button_MercadoPago_Supervisor {
+    padding-left: 3px;
+    margin-top: -10px;
+    font-size: 14px;
+    height: 30px;
+    padding-top:4px;
 }
 
 
-h4.datos_del_administrador {
-    text-align:center;
-
 }
 
-.clases {
-    margin-top:20px;
+/*-------------------------------------------------------------media query 992 --------------------------------------------------------------*/
+
+
+@media (min-width:992px) {
+
+    h2.titulos {
+        font-size: 24px;
+        margin-top:-10px;
+    }
+
+.cabezera {
+    height:20px;
 }
 
-#Etiqueta_Nombre {
-    margin-top:20px;
-    margin-left:23px;
-}
-#Etiqueta_Categoria {
-    margin-top:20px;
-    margin-left:23px;
-}
-#TextBox_Password {
-    padding-left:23px;
-    margin-top:10px;
-    width:100%;
-    height:36px;
+hr.linea {
+    margin-top: 0px;
 }
 
-div.encabezado_panel {
-    background-color:#4285F4;
+h3.etiqueta {
+    font-size: 16px;
+    margin-top: 2px;
+    float:left;
+}
+
+input#Cuenta_Digital_Supervisor {    
+    padding-left: 4px;
+    margin-top: -10px;
+    height: 30px;
+}
+
+input#PayPal_Supervisor {
+    padding-left: 3px;
+    margin-top: -10px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+input#Conversion_Dolares_A_Pesos {
+    padding-left: 3px;
+    margin-top: -10px;
+    height: 30px;
+}
+
+input#Boton_Cuenta_Digital_Supervisor {
+    height: 35px;
+    font-size: 16px;
+    padding-top: 3px;
+}
+
+input#Boton_PayPal_Supervisor {
+    height: 35px;
+    font-size: 16px;
+    padding-top: 4px;
+}
+
+input#MercadoPago_Supervisor {
+    padding-left: 3px;
+    margin-top: -10px;
+    height: 30px;
+}
+
+input#Button_MercadoPago_Supervisor {
+    padding-left: 3px;
+    margin-top: -10px;
+    font-size: 16px;
+    height: 35px;
+    padding-top:4px;
+}
 }

@@ -176,7 +176,7 @@
                         <div class="col-xs-12"> 
                             <div class="panel panel-warning">
                                 <div class="panel-heading" style="text-align:center"><h3 class="titulo_formulario">Formulario</h3></div>
-                                <div class="panel-body">
+                                <div class="panel-body primero">
                                     <form class="form-horizontal">
                                         <div class="form-group">
                                             <label class="col-xs-6 control-label formulario">Administrador:</label>
@@ -232,7 +232,7 @@
             <div class=" container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
+                        <h6 class="pie">Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
                     </div>                        
                 </div>
             </div>

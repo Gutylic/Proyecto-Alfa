@@ -258,9 +258,9 @@
                 <div class=" container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
+                            <h6 class="pie">Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
                         </div>
-                    
+                    </div>
                 </div>
             </footer>
        
