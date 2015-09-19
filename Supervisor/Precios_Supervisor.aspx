@@ -104,78 +104,78 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label formulario">Compra de Ejercicio en $:</label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 control-label formulario">Compra de Ejercicio en $:</label>
+                                                <div class="col-sm-7">
                                                     <asp:TextBox ID="Valor_Ejercicio_Supervisor" CssClass="caja_de_texto" Width="100%" runat="server"></asp:TextBox> 
                                                     <cc1:FilteredTextBoxExtender ID="Valor_Ejercicio_Supervisor_FilteredTextBoxExtender" FilterType="Custom, Numbers" ValidChars="."  runat="server" BehaviorID="Valor_Ejercicio_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Ejercicio_Supervisor" />                                                                                                            
                                                 </div>
                                             </div>                                    
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label formulario">Compra de Explicacion en $:</label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 control-label formulario">Compra de Explicacion en $:</label>
+                                                <div class="col-sm-7">
                                                     <asp:TextBox ID="Valor_Explicacion_Supervisor" runat="server" Width="100%" CssClass="caja_de_texto"></asp:TextBox>
                                                     <cc1:FilteredTextBoxExtender ID="Valor_Explicacion_Supervisor_FilteredTextBoxExtender"  FilterType="Custom, Numbers" ValidChars="."  runat="server" BehaviorID="Valor_Explicacion_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Explicacion_Supervisor" />
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label formulario">Compra de Vídeo en $:</label>
-                                                <div class="col-sm-8">
+                                                <label class="col-sm-5 control-label formulario">Compra de Vídeo en $:</label>
+                                                <div class="col-sm-7">
                                                       <asp:TextBox ID="Valor_Video_Supervisor" Width="100%" CssClass="caja_de_texto" runat="server"></asp:TextBox>
                                                        <cc1:FilteredTextBoxExtender ID="Valor_Video_Supervisor_FilteredTextBoxExtender"  FilterType="Custom, Numbers" ValidChars="."  runat="server" BehaviorID="Valor_Video_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Video_Supervisor" />
                                                     </div>
                                             </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label formulario">Compra de Conjunto de Vídeos en $:</label>
-                                                    <div class="col-sm-8">
+                                                    <label class="col-sm-5 control-label formulario">Compra de Conjunto de Vídeos en $:</label>
+                                                    <div class="col-sm-7">
                                                         <asp:TextBox ID="Valor_Conjunto_De_Videos_Supervisor" runat="server" Width="100%" CssClass="caja_de_texto"></asp:TextBox>                                            
                                                         <cc1:FilteredTextBoxExtender ID="Valor_Conjunto_De_Videos_Supervisor_FilteredTextBoxExtender" runat="server"  FilterType="Custom, Numbers" ValidChars="."  BehaviorID="Valor_Conjunto_De_Videos_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Conjunto_De_Videos_Supervisor" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label formulario">Compra de Ejercicio Personalizado en $:</label>
-                                                    <div class="col-sm-8">
+                                                    <label class="col-sm-5 control-label formulario">Compra de Ejercicio Personalizado en $:</label>
+                                                    <div class="col-sm-7">
                                                         <asp:TextBox ID="Valor_Ejercicio_Personalizado_Supervisor" runat="server" Width="100%" CssClass="caja_de_texto"></asp:TextBox>
                                                         <cc1:FilteredTextBoxExtender ID="Valor_Ejercicio_Personalizado_Supervisor_FilteredTextBoxExtender"  FilterType="Custom, Numbers" ValidChars="."  runat="server" BehaviorID="Valor_Ejercicio_Personalizado_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Ejercicio_Personalizado_Supervisor" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label formulario">Compra de Explicación Personalizada en $:</label>
-                                                    <div class="col-sm-8">
+                                                    <label class="col-sm-5 control-label formulario">Compra de Explicación Personalizada en $:</label>
+                                                    <div class="col-sm-7">
                                                         <asp:TextBox ID="Valor_Explicacion_Personalizada_Supervisor" Width="100%" CssClass="caja_de_texto" runat="server"></asp:TextBox>
                                                         <cc1:FilteredTextBoxExtender ID="Valor_Explicacion_Personalizada_Supervisor_FilteredTextBoxExtender"  FilterType="Custom, Numbers" ValidChars="."  runat="server" BehaviorID="Valor_Explicacion_Personalizada_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Explicacion_Personalizada_Supervisor" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label formulario">Compra de Vídeo Personalizado en $:</label>
-                                                    <div class="col-sm-8">
+                                                    <label class="col-sm-5 control-label formulario">Compra de Vídeo Personalizado en $:</label>
+                                                    <div class="col-sm-7">
                                                         <asp:TextBox ID="Valor_Video_Personalizado_Supervisor" runat="server" Width="100%" CssClass="caja_de_texto"></asp:TextBox>                                            
                                                         <cc1:FilteredTextBoxExtender ID="Valor_Video_Personalizado_Supervisor_FilteredTextBoxExtender"  FilterType="Custom, Numbers" ValidChars="."  runat="server" BehaviorID="Valor_Video_Personalizado_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Video_Personalizado_Supervisor" />
                                                     </div>
                                                 </div>  
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label formulario">Compra de las Impresiones en $:</label>
-                                                    <div class="col-sm-8">
+                                                    <label class="col-sm-5 control-label formulario">Compra de las Impresiones en $:</label>
+                                                    <div class="col-sm-7">
                                                         <asp:TextBox ID="Valor_Impresion_Supervisor" runat="server" Width="100%" CssClass="caja_de_texto"></asp:TextBox>                                            
                                                         <cc1:FilteredTextBoxExtender ID="Valor_Impresion_Supervisor_FilteredTextBoxExtender"  FilterType="Custom, Numbers" ValidChars="."  runat="server" BehaviorID="Valor_Impresion_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Impresion_Supervisor" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label formulario">Prestamo SOS en $:</label>
-                                                    <div class="col-sm-8">
+                                                    <label class="col-sm-5 control-label formulario">Prestamo SOS en $:</label>
+                                                    <div class="col-sm-7">
                                                         <asp:TextBox ID="Valor_Prestamo_SOS_Supervisor" runat="server" Width="100%" CssClass="caja_de_texto" ></asp:TextBox>
                                                         <cc1:FilteredTextBoxExtender ID="Valor_Prestamo_SOS_Supervisor_FilteredTextBoxExtender"  FilterType="Custom, Numbers" ValidChars="."  runat="server" BehaviorID="Valor_Prestamo_SOS_Supervisor_FilteredTextBoxExtender" TargetControlID="Valor_Prestamo_SOS_Supervisor" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label formulario">Duración de Ejercicios (en días):</label>
-                                                    <div class="col-sm-8">
+                                                    <label class="col-sm-5 control-label formulario">Duración de Ejercicios (en días):</label>
+                                                    <div class="col-sm-7">
                                                         <asp:TextBox ID="Duracion_De_Los_Ejercicios_Y_Las_Explicaciones_Supervisor" Width="100%" CssClass="caja_de_texto" runat="server"></asp:TextBox>
                                                         <cc1:FilteredTextBoxExtender ID="Duracion_De_Los_Ejercicios_Y_Las_Explicaciones_Supervisor_FilteredTextBoxExtender" FilterType="Numbers" runat="server" BehaviorID="Duracion_De_Los_Ejercicios_Y_Las_Explicaciones_Supervisor_FilteredTextBoxExtender" TargetControlID="Duracion_De_Los_Ejercicios_Y_Las_Explicaciones_Supervisor" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label formulario">Duración de Videos (en días):</label>
-                                                    <div class="col-sm-8">
+                                                    <label class="col-sm-5 control-label formulario">Duración de Videos (en días):</label>
+                                                    <div class="col-sm-7">
                                                         <asp:TextBox ID="Duracion_De_Los_Videos_Supervisor" runat="server" Width="100%" CssClass="caja_de_texto"></asp:TextBox>                                            
                                                         <cc1:FilteredTextBoxExtender ID="Duracion_De_Los_Videos_Supervisor_FilteredTextBoxExtender" FilterType="Numbers" runat="server" BehaviorID="Duracion_De_Los_Videos_Supervisor_FilteredTextBoxExtender" TargetControlID="Duracion_De_Los_Videos_Supervisor" />
                                                     </div>

@@ -15,13 +15,18 @@ namespace Supervisor
         Logica_Bloque_Insertar_Ejercicio_Dios LBIED = new Logica_Bloque_Insertar_Ejercicio_Dios();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["Administrador"] == null || Session["www"] == null)
             {
                 Response.Redirect("sefue.aspx");
             }
-            Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-            Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-            Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+
+            Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+            Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+            Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
 
         }
 
@@ -94,7 +99,7 @@ namespace Supervisor
 
             if (LBIED.Logica_Insertar_Ejercicio(Titulo, int.Parse(Tipo_De_Ejercicio), int.Parse(Tipo_De_Institucion), bool.Parse(Explicacion_Realizada), Enunciado_MATH, Enunciado_Limpio, Ubicacion_Imprimible_Respuesta, Ubicacion_Ejercicio_Respuesta, Ubicacion_Video, Etiqueta_Busqueda_Ano, Etiqueta_Busqueda_Colegio, Etiqueta_Busqueda_Materia, Etiqueta_Busqueda_Profesor, Etiqueta_Busqueda_Tema) == 1)
             {
-                Ejercicio_Dios.Text ="Usted ha insertado el ejercicio número:" + LBIED.Logica_Numero_De_Ejercicio_Insertado().ToString();
+                Ejercicio_Dios.Text ="Ejercicio nº: " + LBIED.Logica_Numero_De_Ejercicio_Insertado().ToString() + " insertado";
                 string alerta = @"alert('Ejercicio insertado correctamente'); 
 
                 window.location.reload();";

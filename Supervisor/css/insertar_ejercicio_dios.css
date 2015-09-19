@@ -1,137 +1,93 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400);
-body {
-  background-color:#e0e0e0;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
+﻿.datos_del_administrador {
+    font-size:12px;
+    margin-top:0px
 }
-.navbar-default {background-color:#f4f4f4;margin-top:50px;border-width:0;z-index:5;}
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {border:0 solid #4285f4;border-bottom-width:2px;font-weight:800;background-color:transparent;}
-.navbar-default .dropdown-menu {background-color:#ffffff;}
-
-
 
 .fondo {
-    color: #fff;
-    background-color: #6D4A70;
-    border-color: #ddd;
+    height:33px;
 }
 
-div.cerrar_session {
-    text-align:right;
-    margin-top:30px;
-
-}
-
-
-#Volver_A_Consola {
+#Ejercicio_Dios{
+    font-size: 12px;
     font-weight: bolder;
-    font-size: 23px;
-    color: white;
-    margin-right: 100px;
-    text-decoration: none;
+    color: brown;
 }
 
-div.consola_de_control {
-    margin-top:6px;
-
+.boton_formulario {
+    height:30px;
 }
 
-div.ip {
-    margin-top:-27px;
-    color:white;
+input#Boton_Insertar_Dios {
+    margin-top:-18px;
+    height: 25px;
+    font-size: 10px;
 }
 
-div.hora {
-    margin-top:-8px;
-    color:white
+input#Subir_Ejercicio_Dios {
+    float: left;
+    width: 100%;
 }
 
-h1.titulo {
-    color:white;
+h6.pie {
+    margin-top: -10px;
 }
 
-div.administrador {
-    margin-top:23px;
+.pie_formulario {
+    height:40px;
 }
 
-#Etiqueta_Administrador {
-    color:white;
-    font-size:18px;
+@media(min-width:768px) {
 
+    h2.datos_del_administrador {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .fondo {
+        height: 50px;
+    }
+
+    #Ejercicio_Dios{
+        font-size: 14px;
+        font-weight: bolder;
+        color: brown;
+    }
+
+    .boton_formulario {
+        height:55px;
+    }
+
+    input#Boton_Insertar_Dios {
+        margin-top:-8px;
+        height: 30px;
+        font-size: 12px;
+    }
 }
 
-.fondo_encabezado {
-    background:#6D4A70;
-    height:92px;
-}
+@media(min-width:992px) {
 
-hr {border-color:#ececec;}
+    h2.datos_del_administrador {
+        font-size: 16px;
+        margin-top: 5px;
+    }
 
-button {
- outline: 0;
-}
+    .fondo {
+        height: 50px;
+    }
 
-textarea {
- resize: none;
- outline: 0; 
-}
+    #Ejercicio_Dios{
+        font-size: 16px;
+        font-weight: bolder;
+        color: brown;
+    }
 
+    .boton_formulario {
+        height:55px;
+    }
 
-
-
-
-.modal-footer {
- border-width:0;
-}
-.dropdown-menu {
- background-color:#f4f4f4;
- border-color:#f0f0f0;
- border-radius:0;
- margin-top:-1px;
-}
-/* end theme */
-
-/* template layout*/
-#subnav {
- position:fixed;
- width:100%;
-}
-
-@media (max-width: 768px) {
- #subnav {
-  padding-top: 6px;
- }
-}
-
-#main {
- padding-top:120px;
-}
-
-
-h4.datos_del_administrador {
-    text-align:center;
-
-}
-
-.clases {
-    margin-top:20px;
-}
-
-#Etiqueta_Nombre {
-    margin-top:20px;
-    margin-left:23px;
-}
-#Etiqueta_Categoria {
-    margin-top:20px;
-    margin-left:23px;
-}
-#TextBox_Password {
-    padding-left:23px;
-    margin-top:10px;
-    width:100%;
-    height:36px;
-}
-
-div.encabezado_panel {
-    background-color:#4285F4;
+    input#Boton_Insertar_Dios {
+        margin-top:-8px;
+        height: 35px;
+        font-size: 16px;
+    }
 }

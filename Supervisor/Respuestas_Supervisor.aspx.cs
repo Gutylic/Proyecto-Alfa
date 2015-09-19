@@ -82,6 +82,11 @@ namespace Supervisor
                 return;
             }
 
+            if (Palabras_Claves.Text.Contains("\r"))
+            {
+                return;
+            }
+
             string Cadena = @"window.open('Respuesta_De_Videos.aspx?Videos=" + Palabras_Claves.Text.Trim().ToLower() + "','_blank');";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
         }

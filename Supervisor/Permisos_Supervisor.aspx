@@ -95,7 +95,7 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-8">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4>Administrador</h4></div>
+                            <div class="panel-heading" ><h4>Administrador</h4></div>
    			                <div class="panel-body primero">                           
                                 <div class="col-xs-4 col-sm-4 col-md-4">                         
                                     <asp:TextBox ID="Nik_Del_Administrador" placeholder="Nick" runat="server" Width="100%"></asp:TextBox>
