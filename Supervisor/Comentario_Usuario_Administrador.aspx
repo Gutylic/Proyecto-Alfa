@@ -11,7 +11,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/encabezado.css" rel="stylesheet" />
-    
+    <link href="css/comentario_usuario_administrador.css" rel="stylesheet" />
     
     <title>Comentarios de Usuarios</title>
 
@@ -79,16 +79,22 @@
                             <div class="panel-body">                
                                 <div class="row">  
                                     <div class="col-sm-12">
-                                        <asp:GridView ID="GridView_Administrador" Width="100%" GridLines="None" runat="server" OnSelectedIndexChanged="Identificador_Administrador" DataKeyNames="ID_Comentario" AutoGenerateColumns="false" >
+                                        <asp:GridView ID="GridView_Administrador" Width="100%" GridLines="Both" CssClass="gridview" Font-Bold="false" BorderColor="#DEDFDE" BorderWidth="1px" BorderStyle="None"  runat="server" OnSelectedIndexChanged="Identificador_Administrador" DataKeyNames="ID_Comentario" AutoGenerateColumns="false" CellPadding="4" ForeColor="#333333"  >
+                                            <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:TemplateField HeaderText="Nombre de la Persona">
+                                                <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Nombre">
                                                     <ItemTemplate>
                                                         <asp:LinkButton ID="Seleccionar_Administrador" CommandName="Select" CommandArgument="<%#((GridViewRow)Container).RowIndex %>" runat="server"><%# Eval ("Nombre") %></asp:LinkButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
-                                                <asp:BoundField DataField="Comentario" HeaderText="Comentario de la Persona" />                  
-                                                <asp:BoundField DataField="Correo" HeaderText="Correo Electrónico" />  
+                                                <asp:BoundField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" DataField="Comentario" HeaderText="Comentario" />                  
+                                                <asp:BoundField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" DataField="Correo" HeaderText="Correo" />  
                                             </Columns>
+
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            
+                                            <RowStyle BackColor="#EFF3FB" />
+
                                         </asp:GridView>
                                     </div>                                        
                                 </div>
@@ -115,25 +121,25 @@
             <div class="row">
                 <div class="col-xs-12"> 
                     <div class="panel panel-warning">
-                        <div class="panel-heading" style="text-align:center"><h3>Formulario</h3></div>
+                        <div class="panel-heading" style="text-align:center"><h3 class="titulo_formulario">Formulario</h3></div>
                         <div class="panel-body">
                                 <form class="form-horizontal">
                                     <div class="form-group">
-                                        <label class="col-sm-1 control-label formulario">Usuario</label>
-                                        <div class="col-sm-11">
-                                            <asp:TextBox ID="Usuario_Administrador" Width="100%" Height="36px"  runat="server"></asp:TextBox>      
+                                        <label class="col-xs-6 control-label formulario">Usuario</label>
+                                        <div class="col-xs-6">
+                                            <asp:TextBox ID="Usuario_Administrador" Width="100%"  runat="server"></asp:TextBox>      
                                         </div>
                                     </div>                                    
                                     <div class="form-group">
-                                        <label class="col-sm-1 control-label formulario">Comentario</label>
-                                        <div class="col-sm-11">
-                                            <asp:TextBox ID="Comentarios_Administrador" TextMode="MultiLine" runat="server" Width="100%" Height="36px" ></asp:TextBox>
+                                        <label class="col-xs-6 control-label formulario">Comentario</label>
+                                        <div class="col-xs-6">
+                                            <asp:TextBox ID="Comentarios_Administrador" TextMode="MultiLine" runat="server" Width="100%"  ></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-1 control-label formulario">Correo</label>
-                                        <div class="col-sm-11">
-                                            <asp:TextBox ID="Correo_Administrador" runat="server" Width="100%" Height="36px"></asp:TextBox>
+                                        <label class="col-xs-6 control-label formulario">Correo</label>
+                                        <div class="col-xs-6">
+                                            <asp:TextBox ID="Correo_Administrador" runat="server" Width="100%" ></asp:TextBox>
                                         </div>
                                     </div>                                                                                
                                 </form>
