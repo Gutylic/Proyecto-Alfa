@@ -86,7 +86,7 @@
         margin-left: 0px;
     }
 
-    .pie_formulario {
+    .panel-footer.pie_formulario {
         height: 40px;
     }
 
@@ -150,6 +150,17 @@
         margin-top: 2px;
     }
 
+        .panel-footer.pie_formulario {
+        height:45px;
+    }
+
+    .btn_formulario {
+        height: 30px;
+        margin-top: -3px;
+        font-size: 15px;
+        padding: 0px;
+    }
+
 }
 
 @media(min-width:992px) {
@@ -195,6 +206,17 @@
     .gridview {
         font-size:14px;
     }
+
+    .btn_formulario {
+        height: 35px;
+        margin-top: -3px;
+        font-size: 16px;
+        padding: 0px;
+    }
+     .panel-footer.pie_formulario {
+        height:50px;
+    }
+
 }
 
 @media(min-width:1200px) {
@@ -235,5 +257,16 @@
         height: 40px;
         font-size: 16px;
         padding-top: 3px;
+    }
+
+    .btn_formulario {
+        height: 40px;
+
+        font-size: 15px;
+
+    }
+
+     .panel-footer.pie_formulario {
+        height:55px;
     }
 }

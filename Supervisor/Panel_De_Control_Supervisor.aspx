@@ -11,7 +11,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
 
-    <link href="css/panel_de_control_supervisor.css" rel="stylesheet"/>
+    <link href="css/panel_de_control_supervisor.css" rel="stylesheet" />
     
     <link href="css/encabezado.css" rel="stylesheet" />
 
@@ -179,26 +179,26 @@
                                 <div class="panel-body primero">
                                     <form class="form-horizontal">
                                         <div class="form-group">
-                                            <label class="col-xs-6 control-label formulario">Administrador:</label>
-                                            <div class="col-xs-6">
+                                            <label class="col-sm-2 col-xs-6 control-label formulario">Administrador:</label>
+                                            <div class="col-sm-10 col-xs-6 ">
                                                 <asp:TextBox ID="Administrador_Supervisor" Width="100%"  runat="server"></asp:TextBox>      
                                             </div>
                                         </div>                                    
                                         <div class="form-group">
-                                            <label class="col-xs-6 control-label formulario">Password:</label>
-                                            <div class="col-xs-6">
+                                            <label class="col-sm-2 col-xs-6 control-label formulario">Password:</label>
+                                            <div class="col-sm-10 col-xs-6">
                                                 <asp:TextBox ID="Password_Supervisor" runat="server" Width="100%" MaxLength="10"></asp:TextBox>
                                             </div>
                                         </div>                                    
                                         <div class="form-group">
-                                            <label class="col-xs-6 control-label formulario">Dirección IP:</label>
-                                            <div class="col-xs-6">
+                                            <label class="col-sm-2 col-xs-6  control-label formulario">Dirección IP:</label>
+                                            <div class="col-sm-10 col-xs-6 ">
                                                 <asp:Label ID="IP_Supervisor" runat="server" Width="100%"></asp:Label>                                            
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-xs-6 control-label formulario">Bloqueado:</label>
-                                                <div class="col-xs-6 ">
+                                            <label class="col-sm-2 col-xs-6  control-label formulario">Bloqueado:</label>
+                                                <div class="col-sm-10 col-xs-6 ">
                                                     <asp:CheckBox class="checkbox" ID="CheckBox_Bloqueo_Supervisor" runat="server" />                                                          
                                                 </div>
                                             
