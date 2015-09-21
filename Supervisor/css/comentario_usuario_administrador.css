@@ -108,6 +108,10 @@ h6.pie {
         height: 40px;
     }
 
+     .gridview {
+        font-size:14px;
+    }
+
     
 }
 
@@ -125,6 +129,10 @@ h6.pie {
     .encabezado_panel.panel-heading.fondo {
         text-align: center;
         height: 45px;
+    }
+
+    .gridview {
+        font-size:16px;
     }
 
     

@@ -1,12 +1,13 @@
 ﻿.encabezado_panel.panel-heading.fondo {
     text-align: center;
-    height: 85px;
+    height: 63px;
 
 }
 
 hr {
     border-color: #ececec;
-    margin-top: 0px;
+    margin-top: -5px;
+    margin-bottom: 5px;
 }
 
 h6.pie {
@@ -20,7 +21,8 @@ h2.datos_del_administrador {
 
 input#Boton_Buscar_Administrador {
     font-size: 10px;
-    margin-top: -7px;
+    margin-top: -2px;
+    height: 27px;
 }
 
 input#Buscar_Administrador {
@@ -28,7 +30,7 @@ input#Buscar_Administrador {
     padding-left: 4px;
     height: 27px;
     width: 100%;
-    margin-top: -7px;
+    margin-top: -2px;
 }
 
 .col-xs-6.buscar_administrador {
@@ -49,11 +51,11 @@ table#GridView_Administrador {
 @media (min-width:768px) {
 
 .encabezado_panel.panel-heading.fondo {
-    height: 35px;
+    height: 75px;
 }
 
     hr {
-        margin-top: 70px;
+        margin-top: 7px;
     }
 
     h2.datos_del_administrador {
@@ -62,11 +64,17 @@ table#GridView_Administrador {
 
     input#Boton_Buscar_Administrador {
     font-size: 12px;
+    margin-top: 2px;
 }
 
 
 input#Buscar_Administrador {
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+table#GridView_Administrador {
+   font-size: 12px;
 }
 
 
@@ -77,7 +85,7 @@ input#Buscar_Administrador {
 
 @media (min-width:992px) {
 .encabezado_panel.panel-heading.fondo {
-    height: 40px;
+    height: 80px;
 }
 
     h2.datos_del_administrador {
@@ -86,10 +94,17 @@ input#Buscar_Administrador {
 
 input#Boton_Buscar_Administrador {
     font-size: 14px;
+    margin-top: 3px;
+    padding-top: 2px;
 }
 
 input#Buscar_Administrador {
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+table#GridView_Administrador {
+   font-size: 14px;
 }
 
 }
@@ -100,7 +115,7 @@ input#Buscar_Administrador {
 @media (min-width:1200px) {
 
 .encabezado_panel.panel-heading.fondo {
-    height: 45px;
+    height: 85px;
 }
 
     h2.datos_del_administrador {
@@ -109,10 +124,19 @@ input#Buscar_Administrador {
      
 input#Boton_Buscar_Administrador {
     font-size: 16px;
+    margin-top: 7px;
 }
 
 input#Buscar_Administrador {
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: 7px;
 }
+
+div#Formulario {
+padding:1px;
+height:36px;
+}
+
+
 
 }

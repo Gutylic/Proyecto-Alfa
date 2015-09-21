@@ -76,7 +76,7 @@
                 <div class="col-xs-12">       
                     <div class="panel panel-default">                             
                         <div class="encabezado_panel panel-heading fondo" style="text-align:center"><h2 class="datos_del_administrador">Mensaje de los Clientes</h2></div>   
-                            <div class="panel-body">                
+                            <div class="panel-body cuerpo_del_panel">                
                                 <div class="row">  
                                     <div class="col-sm-12">
                                         <asp:GridView ID="GridView_Administrador" Width="100%" GridLines="Both" CssClass="gridview" Font-Bold="false" BorderColor="#DEDFDE" BorderWidth="1px" BorderStyle="None"  runat="server" OnSelectedIndexChanged="Identificador_Administrador" DataKeyNames="ID_Comentario" AutoGenerateColumns="false" CellPadding="4" ForeColor="#333333"  >
