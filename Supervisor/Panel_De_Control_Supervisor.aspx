@@ -108,7 +108,8 @@
             <div class="row">
                 <div class="col-xs-12">       
                     <div class="panel panel-default">                             
-                        <div class="encabezado_panel panel-heading fondo" style="text-align:center"><h2 class="datos_del_administrador">Administradores</h2>
+                        <div class="encabezado_panel panel-heading fondo" style="text-align:center">
+                            <h2 class="datos_del_administrador">Administradores</h2>
                             <hr />
                             <div class="row">
                                 <div class="col-xs-6">
