@@ -28,9 +28,12 @@ namespace Supervisor
             if (!Page.IsPostBack) // se carga la primera vez al abrir la pagina
             {
 
-                Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-                Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-                Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+                Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+                Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+                Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+                Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+                Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+                Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
 
             }
 
@@ -147,7 +150,8 @@ namespace Supervisor
             List<Seleccionar_Control_Administrador_SupervisorResult> Datos = LBCAS.Logica_Seleccionar_Control_Administradores((int)Session["ID_Ingreso_Egreso"]); // carga los datos del administrador elegido por el supervisor
 
             Administrador_Supervisor.Text = Datos[0].Administrador; // carga el administrador de la base
-            Fecha_De_Ingreso_Supervisor.Text = Datos[0].Fecha_De_Ingreso.ToString(); // carga el password de la base
+
+            Fecha_De_Ingreso_Supervisor.Text = Datos[0].Fecha_De_Ingreso.ToString();
             Fecha_De_Egreso_Supervisor.Text = Datos[0].Fecha_De_Egreso.ToString(); // carga la categoria de la base
 
         }

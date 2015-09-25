@@ -24,10 +24,13 @@ namespace Supervisor
             {
                 Response.Redirect("sefue.aspx");
             }
-            
-            Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-            Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-            Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+
+            Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+            Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+            Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
             Session["Buscar"] = string.Empty;
 
             if (DropDownList_Supervisor.SelectedValue == "5")
@@ -75,7 +78,7 @@ namespace Supervisor
                     break;
 
             }
-           
+
             if (!Page.IsPostBack) // se carga la primera vez al abrir la pagina
             {
                 Session["Opcion"] = 1;
@@ -188,8 +191,8 @@ namespace Supervisor
         protected void Identificador_Supervisor(object sender, EventArgs e) // convierto al datalist en editable 
         {
             Formulario_Supervisor.Visible = true;
-           
-            
+
+
             GridViewRow row = GridView_Supervisor.SelectedRow; // declaro una variable del tipo de gridview
             Session["ID_Usuario"] = GridView_Supervisor.DataKeys[row.RowIndex].Value; // capturo el identificador del dato presionado
             List<Seleccionar_Usuario_SupervisorResult> Datos = LBPDCUS.Logica_Seleccionar_Usuario(int.Parse(Session["ID_Usuario"].ToString()));
@@ -202,7 +205,7 @@ namespace Supervisor
             if (Datos[0].Modelo_De_Celular != null) { Modelo_Supervisor.Text = Datos[0].Modelo_De_Celular.ToString(); }
 
             Credito_Supervisor.Text = Datos[0].Credito_De_Usuario.ToString();
-             Session["Comparar_Correo"] = Correo_Supervisor.Text;
+            Session["Comparar_Correo"] = Correo_Supervisor.Text;
             CheckBox_Pedido_Supervisor.Checked = Datos[0].Pedido_De_Prestamo;
             CheckBox_Activacion_Supervisor.Checked = Datos[0].Activacion_De_Usuarios;
 
@@ -225,13 +228,12 @@ namespace Supervisor
             int Valor = LBPDCUS.Logica_Actualizar_Usuario(Session["Comparar_Correo"].ToString(), CheckBox_Activacion_Supervisor.Checked, (int)Session["ID_Usuario"], (int)Session["Variable_ID_Empresa"], Correo_Supervisor.Text.ToLower(), Skype_Supervisor.Text, Celular_Supervisor.Text, Modelo_Supervisor.Text, Usuario_Supervisor.Text);
 
             switch (Valor)
-            { 
+            {
                 case 0:
                     ScriptManager.RegisterClientScriptBlock(Page, typeof(string), "", "alert('Error en el correo');", true);
                     break;
                 case 1:
                     string alerta = @"alert('Usuario correctamente actualizado'); 
-
                     window.location.reload();";
 
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
@@ -248,7 +250,7 @@ namespace Supervisor
 
             if (Boton_Nuevo_Supervisor.Text == "Insertar")
             {
-                
+
                 int Valor = LBPDCUS.Logica_Insertar_Usuario(Usuario_Supervisor.Text, Correo_Supervisor.Text, (int)Session["Variable_ID_Empresa"], (string)Session["Administrador"]); // analiza la insercion
 
                 switch (Valor)
@@ -256,10 +258,10 @@ namespace Supervisor
                     case 0:
                         ScriptManager.RegisterClientScriptBlock(Page, typeof(string), "", "alert('Error en el usuario');", true);
                         return;
-                    case 1:    
+                    case 1:
                         Formulario_Supervisor.Visible = true;
                         Usuario_Supervisor.Enabled = false;
-                        Boton_Nuevo_Supervisor.Text = "Nuevo";                   
+                        Boton_Nuevo_Supervisor.Text = "Nuevo";
                         break;
                     case -1:
                         ScriptManager.RegisterClientScriptBlock(Page, typeof(string), "", "alert('Error en el correo');", true);
@@ -272,12 +274,11 @@ namespace Supervisor
                         return;
                 }
                 string alerta = @"alert('Usuario correctamente creado'); 
-
                     window.location.reload();";
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
-                
-                        return;
+
+                return;
 
             }
             if (Boton_Nuevo_Supervisor.Text == "Nuevo")
@@ -300,11 +301,10 @@ namespace Supervisor
 
         protected void Boton_Borrar_Supervisor_Click(object sender, EventArgs e)
         {
-          
+
             if (LBPDCUS.Logica_Borrar_Usuario(int.Parse(Session["ID_Usuario"].ToString())) == 1) // Borrar el administrador               
             {
                 string alerta = @"alert('Usuario correctamente borrado'); 
-
                     window.location.reload();";
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
