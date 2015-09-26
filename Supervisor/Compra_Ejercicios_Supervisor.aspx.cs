@@ -44,9 +44,12 @@ namespace Supervisor
 
             if (!Page.IsPostBack) // se carga la primera vez al abrir la pagina
             {
-                Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-                Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-                Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+                Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+                Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+                Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+                Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+                Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+                Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
             }
 
             if (LBCES.Logica_Contar_Ejercicios(string.Empty, 1, (string)Session["Empresa"]) == null)
