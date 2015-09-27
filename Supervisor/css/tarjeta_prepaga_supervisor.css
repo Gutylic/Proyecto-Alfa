@@ -1,137 +1,286 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400);
-body {
-  background-color:#e0e0e0;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
-}
-.navbar-default {background-color:#f4f4f4;margin-top:50px;border-width:0;z-index:5;}
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {border:0 solid #4285f4;border-bottom-width:2px;font-weight:800;background-color:transparent;}
-.navbar-default .dropdown-menu {background-color:#ffffff;}
+﻿.boton_excel {
+        height: 25px;
+        margin-top: -17px;
+        font-size: 13px;
+        padding-top: 3px;
+    }
 
+    .fondo_excel {
+        height: 40px;
+    }
 
-
-.fondo {
-    color: #fff;
-    background-color: #6D4A70;
-    border-color: #ddd;
+    input#Boton_Insertar_Supervisor {
+    padding-left: 5px;
 }
 
-div.cerrar_session {
-    text-align:right;
-    margin-top:30px;
+    h2.datos_del_administrador {
+        font-size: 12px;
+        margin-top: -1px;
+    }
 
-}
+    .encabezado_panel.panel-heading.fondo {
+        text-align: center;
+        height: 63px;
+    }
 
+    hr {
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
 
-#Volver_A_Consola {
-    font-weight: bolder;
-    font-size: 23px;
-    color: white;
-    margin-right: 100px;
-    text-decoration: none;
-}
+    select#DropDownList_Supervisor {
+    height: 25px;
+    }
 
-div.consola_de_control {
-    margin-top:6px;
+    #Buscar_Supervisor {
+        height: 25px;
+        padding-left: 2px;
+        font-size: 12px;
+    }
 
-}
+    #Boton_Buscar_Supervisor {
+        height: 25px;
+        font-size: 12px;
+        padding-top: 3px;
+        padding-left: 10px;
+    }
 
-div.ip {
-    margin-top:-27px;
-    color:white;
-}
+    .gridview {
+        font-size:10px;
+    }
 
-div.hora {
-    margin-top:-8px;
-    color:white
-}
+    th {
+        text-align: center;
+        padding: 1px;
+        font-weight: normal;
+    }
 
-h1.titulo {
-    color:white;
-}
+    .cuerpo_del_panel {
+        padding: 0px;
+    }
 
-div.administrador {
-    margin-top:23px;
-}
+    .panel-warning > .panel-heading {
+        height: 40px;
+    }
 
-#Etiqueta_Administrador {
-    color:white;
-    font-size:18px;
+    h3.titulo_formulario {
+        font-size: 16px;
+        margin-top: 2px;
+    }
 
-}
+    label.control-label.formulario {
+    left: -15px;
+    }
 
-.fondo_encabezado {
-    background:#6D4A70;
-    height:92px;
-}
+    .pie_formulario {
+        height: 40px;
+    }
 
-hr {border-color:#ececec;}
+    .btn_formulario {
+        height: 25px;
+        margin-top: -3px;
+        font-size: 10px;
+        padding: 0px;
+    }
 
-button {
- outline: 0;
-}
+ 
+    h6.pie {
+        margin-top: -10px;
+    }
 
-textarea {
- resize: none;
- outline: 0; 
-}
-
-
-
-
-
-.modal-footer {
- border-width:0;
-}
-.dropdown-menu {
- background-color:#f4f4f4;
- border-color:#f0f0f0;
- border-radius:0;
- margin-top:-1px;
-}
-/* end theme */
-
-/* template layout*/
-#subnav {
- position:fixed;
- width:100%;
-}
-
-@media (max-width: 768px) {
- #subnav {
-  padding-top: 6px;
- }
-}
-
-#main {
- padding-top:120px;
+    input#CheckBox_Activacion_Supervisor {
+    margin-top: 18px;
+    margin-left: -45px;
 }
 
 
-h4.datos_del_administrador {
-    text-align:center;
+@media(min-width:768px) {
+
+    .boton_excel {
+        height: 30px;
+        margin-top: -10px;
+        font-size: 15px;
+        padding-top: 3px;
+    }
+
+    .fondo_excel {
+        height: 50px;
+    }
+
+    h2.datos_del_administrador {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    .encabezado_panel.panel-heading.fondo {
+        text-align: center;
+        height: 83px;
+    }
+
+    hr {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    select#DropDownList_Supervisor {
+    height: 30px;
+}
+
+     #Buscar_Supervisor {
+        height: 30px;
+        padding-left: 3px;
+        font-size: 13px;
+    }
+
+    #Boton_Buscar_Supervisor {
+        height: 30px;
+        font-size: 13px;
+        padding-top: 3px;
+    }
+
+    .gridview {
+        font-size:12px;
+    }
+
+    h3.titulo_formulario {
+        font-size: 17px;
+        margin-top: 2px;
+    }
+
+span#Codigo_Supervisor {
+  margin-bottom: 5px;
+}
+
+span#Credito_Supervisor {
+  margin-bottom: 5px;
+}
+
+span#Vencimiento_Supervisor_CalendarExtender {
+  margin-bottom: 5px;
+}
+
+span#CheckBox_Activacion_Supervisor {
+    margin-bottom: 5px;
+    height: 17px;
+}
+
+input#CheckBox_Activacion_Supervisor {
+    margin-top: -5px;
+    margin-left: -15px;
+}
+
+.btn_formulario {        
+        font-size: 12px;
+        
+    }
 
 }
 
-.clases {
-    margin-top:20px;
+@media(min-width:992px) {
+
+    .boton_excel {
+        height: 35px;
+        margin-top: -7px;
+        font-size: 16px;
+        padding-top: 3px;
+    }
+
+    .fondo_excel {
+        height: 60px;
+    }
+
+     h2.datos_del_administrador {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .encabezado_panel.panel-heading.fondo {
+        text-align: center;
+        height: 93px;
+    }
+
+    hr {
+        margin-top: 9px;
+        margin-bottom: 9px;
+    }
+
+     #Buscar_Supervisor {
+        height: 35px;
+        padding-left: 3px;
+        font-size: 14px;
+    }
+
+    #Boton_Buscar_Supervisor {
+        height: 35px;
+        font-size: 14px;
+        padding-top: 3px;
+    }
+
+    select#DropDownList_Supervisor {
+    height: 35px;
+    }
+
+    .gridview {
+        font-size:14px;
+    }
+
+ 
+
+.btn_formulario {        
+        font-size: 14px;
+        
+    }
+.btn_formulario {        
+        font-size: 14px;
+        
+    }
 }
 
-#Etiqueta_Nombre {
-    margin-top:20px;
-    margin-left:23px;
-}
-#Etiqueta_Categoria {
-    margin-top:20px;
-    margin-left:23px;
-}
-#TextBox_Password {
-    padding-left:23px;
-    margin-top:10px;
-    width:100%;
-    height:36px;
-}
+@media(min-width:1200px) {
 
-div.encabezado_panel {
-    background-color:#4285F4;
+    .boton_excel {
+        height: 40px;
+        margin-top: -4px;
+        font-size: 18px;
+        padding-top: 3px;
+    }
+
+    .fondo_excel {
+        height: 70px;
+    }
+
+     h2.datos_del_administrador {
+        font-size: 18px;
+        margin-top: 7px;
+    }
+
+    .encabezado_panel.panel-heading.fondo {
+        text-align: center;
+        height: 103px;
+    }
+
+    hr {
+        margin-top: 9px;
+        margin-bottom: 9px;
+    }
+
+    #Buscar_Supervisor {
+        height: 40px;
+        padding-left: 3px;
+        font-size: 16px;
+    }
+
+    #Boton_Buscar_Supervisor {
+        height: 40px;
+        font-size: 16px;
+        padding-top: 3px;
+    }
+
+    select#DropDownList_Supervisor {
+    height: 40px;
+    }
+    .btn_formulario {        
+        font-size: 15px;
+        
+    }
 }

@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/encabezado.css" rel="stylesheet" />
     <link href="css/cargar_de_credito_manual_supervisor.css" rel="stylesheet"/>
 
     <title>Carga de Crédito Manual</title>
@@ -40,45 +41,55 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
          
             <div class="container">               
-            <nav class="navbar navbar-fixed-top header fondo_encabezado">
+                <nav class="navbar navbar-fixed-top header fondo_encabezado">
  	            <div class="container"> 
-                    <div class="col-md-12">                       
-                        <div class="row">
-                            <div class="col-xs-4 administrador">
-                                <asp:Label ID="Etiqueta_Administrador" runat="server" Text=""></asp:Label>
-                            </div>
-                            <div class="col-xs-4 consola_de_control">
-                                <h1 class="titulo">Crédito Manual</h1>
-                            </div> 
-                            <div class="col-xs-4 cerrar_session">                             
-                                <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click"><< Volver</asp:LinkButton>
-                            </div>
-                        </div>                    
-                        <div class="row">
-                            <div class="col-xs-4 ip">
-                                <asp:Label ID="Etiqueta_Localizador" runat="server" ></asp:Label>
-                            </div>
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>                                             
+                                         
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs administrador" >
+                            <asp:Label ID="Administrador_chico" runat="server" Text="">Adm:</asp:Label>
+                            <asp:Label ID="Etiqueta_Administrador_Chico" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-4 hora">                         
-                                <asp:Label ID="Etiqueta_Hora" runat="server" ></asp:Label>
-                            </div>
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>
+                        <div class="col-xs-12 hidden-xs administrador">
+                            <asp:Label ID="Administrador_grande" runat="server" Text="">Administrador:</asp:Label>
+                            <asp:Label ID="Etiqueta_Administrador_Grande" CssClass ="etiqueta_administrador_grande" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 visible-xs ip chico">
+                            <asp:Label ID="Localizador_chico" runat="server">Conectado:</asp:Label>
+                            <asp:Label ID="Etiqueta_Localizador_Chico" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="col-xs-4 hidden-xs ip chico">
+                            <asp:Label ID="Localizador_Grande" runat="server">Conectado:</asp:Label>
+                            <asp:Label ID="Etiqueta_Localizador_Grande" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="col-xs-4 consola_de_control" style="text-align:center; ">
+                            <h1 class="titulo">Manual</h1>
+                        </div>
+                        <div class="col-xs-4 cerrar_session">                             
+                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click"><< Volver</asp:LinkButton>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs hora_chica_num" >
+                            <asp:Label ID="Hora_chico" runat="server" >Hora:</asp:Label>
+                            <asp:Label ID="Etiqueta_Hora_Chica" runat="server" ></asp:Label>
+                        </div>
+                        <div class="col-xs-12 hidden-xs hora_grande" >
+                            <asp:Label ID="Hora_grande" runat="server" >Hora de Conexión:</asp:Label>
+                            <asp:Label ID="Etiqueta_Hora_Grande" runat="server" ></asp:Label>
                         </div>
                     </div>
                 </div>
-            </nav>    
+             </nav>
         </div>  
 
         <div class="navbar navbar-default" id="subnav">
             <div class="col-md-12"></div>	
         </div>
         <div class="container" id="main">
-            <div class="well">
-                <asp:Button ID="Boton_Excel_Supervisor" CssClass="btn btn-info " Width="100%" runat="server" Text="Excel" OnClick="Boton_Excel_Supervisor_Click" />
+            <div class="well fondo_excel">
+                <asp:Button ID="Boton_Excel_Supervisor" CssClass="btn btn-info boton_excel" Width="100%" runat="server" Text="Excel" OnClick="Boton_Excel_Supervisor_Click" />
             </div>   
         </div>
             <div class="container" >
@@ -88,36 +99,40 @@
                             <div class="encabezado_panel panel-heading fondo"><h2 class="datos_del_administrador">Carga Manual</h2>
                                 <hr />
                                 <div class="row">
-                                    <div class="col-xs-4">
-                                        <asp:DropDownList ID="DropDownList_Supervisor" Width="100%" Height="36px" runat="server">
+                                    <div class="col-sm-3 col-xs-4">
+                                        <asp:DropDownList ID="DropDownList_Supervisor" Width="100%" runat="server">
                                             <asp:ListItem Value ="1">Elegir</asp:ListItem>
                                             <asp:ListItem Value ="2">Usuario</asp:ListItem>
                                             <asp:ListItem Value ="3">Correo</asp:ListItem>                            
                                         </asp:DropDownList>
                                     </div>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="Buscar_Supervisor" Width="100%" Height="36px" runat="server"></asp:TextBox>                                       
+                                    <div class="col-sm-7 col-xs-4">
+                                        <asp:TextBox ID="Buscar_Supervisor" Width="100%"  runat="server"></asp:TextBox>                                       
                                     </div>
-                                    <div class="col-xs-4">
+                                    <div class="col-sm-2 col-xs-4">
                                         <asp:Button ID="Boton_Buscar_Supervisor" runat="server" CssClass="btn btn-primary" Width="100%" Text="Buscar" OnClick="Boton_Buscar_Supervisor_Click" />
                                     </div>                          
                                 </div>
                             </div>   
                        
             
-                            <div class="panel-body">                                                                              
+                            <div class="panel-body cuerpo_del_panel">                                                                              
                                 <div class="row">  
                                     <div class="col-sm-12">
-                                        <asp:GridView ID="GridView_Supervisor" Width="100%" GridLines="None" runat="server" OnSelectedIndexChanged="Identificador_Supervisor" DataKeyNames="ID_Usuario" AutoGenerateColumns="false" >
+                                        <asp:GridView ID="GridView_Supervisor" Width="100%" GridLines="Both" CssClass="gridview" Font-Bold="false" BorderColor="#DEDFDE" BorderWidth="1px" BorderStyle="None"  runat="server" OnSelectedIndexChanged="Identificador_Supervisor" DataKeyNames="ID_Usuario" AutoGenerateColumns="false" CellPadding="4" ForeColor="#333333">
+                                            <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:TemplateField HeaderText="Usuario">
+                                                <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Usuario">
                                                     <ItemTemplate>
                                                         <asp:LinkButton ID="Seleccionar_Supervisor" CommandName="Select" CommandArgument="<%#((GridViewRow)Container).RowIndex %>" runat="server"><%# Eval ("Usuario") %></asp:LinkButton>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
-                                                <asp:BoundField DataField="Correo" HeaderText="Correo" />
-                                                <asp:BoundField DataField="Credito_De_Usuario" HeaderText="Credito" />   
+                                                <asp:BoundField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" DataField="Correo" HeaderText="Correo" />
+                                                <asp:BoundField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" DataField="Credito_De_Usuario" HeaderText="Credito" />   
                                             </Columns>
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            
+                                            <RowStyle BackColor="#EFF3FB" />
                                         </asp:GridView>
                                     </div>                                        
                                 </div>
@@ -141,36 +156,45 @@
                             </div>         
                         </div>
             </div>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate> 
                 <div class="container" id="Formulario_Supervisor" runat="server" visible="false">
                 <div class="row">
                     <div class="col-xs-12"> 
                         <div class="panel panel-warning">
-                            <div class="panel-heading" style="text-align:center"><h3>Formulario</h3></div>
+                            <div class="panel-heading" style="text-align:center"><h3 class="titulo_formulario">Formulario</h3></div>
                             <div class="panel-body">
                                 <form class="form-horizontal">
                                     <div class="form-group">
-                                        <label class="col-sm-4 control-label formulario">Usuario:</label>
-                                        <div class="col-sm-8">
-                                            <asp:Label ID="Usuario_Supervisor" Height="36px" Width="100%" MaxLength="10" runat="server"></asp:Label>                                              
+                                        <div class="col-xs-3">
+                                            <label class=" control-label formulario">Usuario:</label>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <asp:Label ID="Usuario_Supervisor"  Width="100%" MaxLength="10" runat="server"></asp:Label>                                              
                                         </div>
                                     </div>                                    
                                     <div class="form-group">
-                                        <label class="col-sm-4 control-label formulario">Correo Electrónico:</label>
-                                        <div class="col-sm-8">
-                                            <asp:Label MaxLength="30" ID="Correo_Supervisor" runat="server" Width="100%" Height="36px"></asp:Label>
+                                        <div class="col-xs-3">
+                                            <label class=" control-label formulario">Correo:</label>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <asp:Label MaxLength="30" ID="Correo_Supervisor" runat="server" Width="100%" ></asp:Label>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-4 control-label formulario">Crédito en $:</label>
-                                        <div class="col-sm-8">
-                                            <asp:TextBox ID="Credito_Supervisor" Width="100%" Height="36px" runat="server"></asp:TextBox>
-                                        
+                                        <div class="col-xs-3">
+                                            <label class="control-label formulario">Crédito:</label>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <asp:TextBox ID="Credito_Supervisor" Width="100%" runat="server"></asp:TextBox>                                        
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-4 control-label formulario">Tipo de Carga</label>
-                                        <div class="col-sm-8">
-                                             <asp:DropDownList ID="DropDownList_Carga" runat="server" Height="36px">                            
+                                        <div class="col-xs-3">
+                                            <label class=" control-label formulario">Carga</label>
+                                        </div>
+                                        <div class="col-sm-9">
+                                             <asp:DropDownList ID="DropDownList_Carga" runat="server" >                            
                                                 <asp:ListItem Value ="13">No Resolucion</asp:ListItem>
                                                 <asp:ListItem Value ="16">Rapipago</asp:ListItem>
                                                 <asp:ListItem Value ="17">Cuenta Digital</asp:ListItem>   
@@ -187,28 +211,28 @@
                                 </form>
                             </div>
                             
-                            <div class="panel-footer pie_formulario" style="height:55px">
-                                <asp:UpdatePanel ID="UpdatePanel_Botonera" runat="server">
-                                    <ContentTemplate>
+                            <div class="panel-footer pie_formulario" >
+                                
                                         <div class="col-xs-12 boton_formulario">
-                                            <asp:Button ID="Boton_Actualizar_Supervisor" OnClientClick="return Confirmacion();" Width="100%" CssClass="btn btn-warning " runat="server" Text="Actualizar" OnClick="Boton_Actualizar_Supervisor_Click" />
+                                            <asp:Button ID="Boton_Actualizar_Supervisor" OnClientClick="return Confirmacion();" Width="100%" CssClass="btn btn-warning btn_formulario" runat="server" Text="Actualizar" OnClick="Boton_Actualizar_Supervisor_Click" />
                                         </div>
                                         
-                                    </ContentTemplate>
-                                </asp:UpdatePanel>
+                                    
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            </ContentTemplate>
+            </asp:UpdatePanel>
             <hr />
                     <footer>
                         <div class=" container">
                             <div class="row">
-                                <div class="col-xs-6">
-                                    <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
+                                <div class="col-xs-12">
+                                    <h6 class="pie">Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
                                 </div>
-                                <div class="col-xs-6"></div>
+                                
                             </div>
                         </div>
                     </footer>
