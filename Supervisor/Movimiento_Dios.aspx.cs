@@ -27,9 +27,12 @@ namespace Supervisor
 
             if (!Page.IsPostBack) // se carga la primera vez al abrir la pagina
             {
-                Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-                Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-                Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+                Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+                Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+                Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+                Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+                Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+                Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();   
             }
 
             Session["Buscar"] = string.Empty;
@@ -175,7 +178,7 @@ namespace Supervisor
             Session["ID_Movimiento"] = GridView_Dios.DataKeys[row.RowIndex].Value; // capturo el identificador del dato presionado
             List<Seleccionar_Movimiento_DiosResult> Datos = LBMD.Logica_Seleccionar_Movimientos((int)Session["ID_Movimiento"]);
             Usuario_Dios.Text = Datos[0].Usuario.ToString();
-            Fecha_Dios.Text = Datos[0].Fecha_Del_Movimiento.ToString();
+            Fecha_Dios.Text = Datos[0].Fecha_Del_Movimiento.ToString("dd/MM/yyyy HH:mm");
             Descripcion_Dios.Text = Datos[0].Descripcion_De_Movimiento.ToString();
             Debe_Dios.Text = Datos[0].Plata_Debe.ToString();
             Haber_Dios.Text = Datos[0].Plata_Haber.ToString();

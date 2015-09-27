@@ -31,13 +31,76 @@ namespace Supervisor {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// Control Etiqueta_Administrador.
+        /// Control Administrador_chico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Etiqueta_Administrador;
+        protected global::System.Web.UI.WebControls.Label Administrador_chico;
+        
+        /// <summary>
+        /// Control Etiqueta_Administrador_Chico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Administrador_Chico;
+        
+        /// <summary>
+        /// Control Administrador_grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Administrador_grande;
+        
+        /// <summary>
+        /// Control Etiqueta_Administrador_Grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Administrador_Grande;
+        
+        /// <summary>
+        /// Control Localizador_chico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Localizador_chico;
+        
+        /// <summary>
+        /// Control Etiqueta_Localizador_Chico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Localizador_Chico;
+        
+        /// <summary>
+        /// Control Localizador_Grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Localizador_Grande;
+        
+        /// <summary>
+        /// Control Etiqueta_Localizador_Grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Localizador_Grande;
         
         /// <summary>
         /// Control Volver_A_Consola.
@@ -49,22 +112,40 @@ namespace Supervisor {
         protected global::System.Web.UI.WebControls.LinkButton Volver_A_Consola;
         
         /// <summary>
-        /// Control Etiqueta_Localizador.
+        /// Control Hora_chico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Etiqueta_Localizador;
+        protected global::System.Web.UI.WebControls.Label Hora_chico;
         
         /// <summary>
-        /// Control Etiqueta_Hora.
+        /// Control Etiqueta_Hora_Chica.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Etiqueta_Hora;
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Hora_Chica;
+        
+        /// <summary>
+        /// Control Hora_grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Hora_grande;
+        
+        /// <summary>
+        /// Control Etiqueta_Hora_Grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Hora_Grande;
         
         /// <summary>
         /// Control Respuesta_Del_Ejercicio.

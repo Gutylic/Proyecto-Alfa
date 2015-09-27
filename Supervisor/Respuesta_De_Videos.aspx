@@ -8,6 +8,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link href="css/encabezado.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/respuesta_de_ejercicios.css" rel="stylesheet"/>
 
@@ -20,101 +21,116 @@
     
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             
-        <div>
-
-            <nav class="navbar navbar-fixed-top header fondo_encabezado">
- 	            <div class="col-md-12">
-                    <div class="Container">
-                        <div class="row">
-                            <div class="col-xs-4 administrador">
-                                <asp:Label ID="Etiqueta_Administrador" runat="server" Text=""></asp:Label>
-                            </div>
-                            <div class="col-xs-4 consola_de_control">
-                                <h1 class="titulo">Panel de Control</h1>
-                            </div> 
-                            <div class="col-xs-4 cerrar_session">                             
-                                <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click"><< Volver</asp:LinkButton>
-                            </div>
-                        </div>                    
-                        <div class="row">
-                            <div class="col-xs-4 ip">
-                                <asp:Label ID="Etiqueta_Localizador" runat="server" ></asp:Label>
-                            </div>
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>                                             
+                <div class="container">
+             <nav class="navbar navbar-fixed-top header fondo_encabezado">
+ 	            <div class="container"> 
+                                         
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs administrador" >
+                            <asp:Label ID="Administrador_chico" runat="server" Text="">Adm:</asp:Label>
+                            <asp:Label ID="Etiqueta_Administrador_Chico" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-4 hora">                         
-                                <asp:Label ID="Etiqueta_Hora" runat="server" ></asp:Label>
-                            </div>
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>
+                        <div class="col-xs-12 hidden-xs administrador">
+                            <asp:Label ID="Administrador_grande" runat="server" Text="">Administrador:</asp:Label>
+                            <asp:Label ID="Etiqueta_Administrador_Grande" CssClass ="etiqueta_administrador_grande" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 visible-xs ip chico">
+                            <asp:Label ID="Localizador_chico" runat="server">Conectado:</asp:Label>
+                            <asp:Label ID="Etiqueta_Localizador_Chico" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="col-xs-4 hidden-xs ip chico">
+                            <asp:Label ID="Localizador_Grande" runat="server">Conectado:</asp:Label>
+                            <asp:Label ID="Etiqueta_Localizador_Grande" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="col-xs-4 consola_de_control" style="text-align:center; ">
+                            <h1 class="titulo">Buscador</h1>
+                        </div>
+                        <div class="col-xs-4 cerrar_session">                             
+                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click">X</asp:LinkButton>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs hora_chica_num" >
+                            <asp:Label ID="Hora_chico" runat="server" >Hora:</asp:Label>
+                            <asp:Label ID="Etiqueta_Hora_Chica" runat="server" ></asp:Label>
+                        </div>
+                        <div class="col-xs-12 hidden-xs hora_grande" >
+                            <asp:Label ID="Hora_grande" runat="server" >Hora de Conexión:</asp:Label>
+                            <asp:Label ID="Etiqueta_Hora_Grande" runat="server" ></asp:Label>
                         </div>
                     </div>
                 </div>
-            </nav>
+             </nav>
+        </div>
+      
 
-            <div class="navbar navbar-default" id="subnav">
-                <div class="col-md-12"></div>	
-            </div>
+        <div class="navbar navbar-default" id="subnav">
+            <div class="col-xs-12"></div>	
+        </div>
 
+
+
+
+
+
+
+            
             <div class="container" id="main">
                 <div class="row">
                     <div class="col-xs-12">       
-                        <div class="well" id="Lista" runat="server" style="margin-top:120px;">
-                        <div class="panel-heading"><h4>Listado de Videos</h4></div> 
-                        <asp:DataList ID="Resultado_DataList" runat="server" Width="90%">
+                        <div class="panel panel-default" id="Lista" runat="server">                             
+                            <div class="encabezado_panel panel-heading fondo"><h2 class="datos_del_administrador">Vídeos</h2></div>                 
+                            <div class="panel-body"> 
+                              <div class="row body">           
+                                <asp:DataList ID="Resultado_DataList" style="width: 100%;" runat="server">
+                                    <ItemTemplate>
 
-                            <ItemTemplate>
-
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td style="width:70%; text-align:center"><asp:Label ID="Etiqueta_Video" runat="server" Text='<%# Eval("Ubicacion_Videos_Y_Explicaciones") %>'></asp:Label></td>
-                                        <td style="width:30%; text-align:center"><iframe runat="server" frameborder="0" scrolling="no" width="100" src ='<%# "http://www.colegioeba.com/enunciado/Enunciado" + Eval("ID_Ejercicio") + ".png" %>' /></td>
                                         
-                                    </tr>
-                                </table>
-                                
-                                
-                                
-                           </ItemTemplate>
-                            
-                        </asp:DataList>
+                                            <div class="col-xs-1 numero_datalist ">
+                                                <asp:Label ID="Etiqueta_Ejercicio" Class="lo" runat="server" Text='<%# Eval("ID_Ejercicio") %>'> </asp:Label>
+                                            </div>
+                                            <div class="col-xs-10 ejercicio_datalist ">                                                
+                                                <asp:Image ID="Imagen" CssClass="imagen"  ImageUrl='<%# "http://www.colegioeba.com/enunciado/Enunciado" + Eval("ID_Ejercicio") + ".png" %>'  runat="server" />
+                                            </div>
+                                        
+                                                                           
+                                    </ItemTemplate>
+                                </asp:DataList>
+                             </div>          
+                            </div>            
+                            <div class="panel-footer">    
+                                <div class="row">
+                                    <div id="Centros_Paginados" runat="server" visible="false">
+                                        <asp:LinkButton ID="Anterior" runat="server" OnClick="Anterior_Click" style="text-decoration:none" >Anterior &nbsp</asp:LinkButton>
+                                      <asp:LinkButton ID="Siguiente" runat="server" OnClick="Siguiente_Click" style="text-decoration:none" >&nbsp Siguiente </asp:LinkButton>
+                                        
+                                    </div>
+                                    <div id="Extremos_Paginados" runat="server">
+                                        <asp:LinkButton ID="Siguiente_Primero" runat="server" OnClick="Siguiente_Click" style="text-decoration:none" >Siguiente </asp:LinkButton>
+                                        <asp:LinkButton ID="Anterior_Ultimo" runat="server" visible="false" OnClick="Anterior_Click" style="text-decoration:none" >Anterior</asp:LinkButton>  
+                                    </div>                                   
+                                </div>                                        
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            
+                    <hr />
                     
-                        <hr />
-
-                      <div id="Centros_Paginados" style="text-align:center" runat="server" visible="false">
-                            <asp:LinkButton ID="Anterior" runat="server" OnClick="Anterior_Click" style="margin-right:10px;"><< Anterior&nbsp;</asp:LinkButton>
-                            <asp:LinkButton ID="Siguiente" runat="server" OnClick="Siguiente_Click" style="margin-left:10px;">&nbsp;Siguiente >></asp:LinkButton>
-                            
-                            
+                    <footer>
+                        <div class=" container">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
+                                </div>
+                                <div class="col-xs-6"></div>
+                            </div>
                         </div>
-                        <div id="Extremos_Paginados" runat="server" style="text-align:center">
-                            <asp:LinkButton ID="Anterior_Ultimo" runat="server" style="margin-right:10px;" visible="false" OnClick="Anterior_Click"><< Anterior&nbsp;</asp:LinkButton>
-                            <asp:LinkButton ID="Siguiente_Primero" runat="server" style="margin-left:10px;" OnClick="Siguiente_Click">&nbsp;Siguiente >></asp:LinkButton>
-                            
-                            
-                            
-                        </div>
-
-                    </div>
-                    </div>
-                </div>
-            </div>         
-           
+                    </footer>
                 
-            <hr />
-            <footer>
-                <div class=" container">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
-                        </div>
-                    <div class="col-xs-6"></div>
-                    </div>
-                </div>
-            </footer>
-       
 
 <!-- script references -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
@@ -122,9 +138,7 @@
 <script src="js/scripts.js"></script>
 
 
-        </div>
+        
     </form>
 </body>
 </html>
-
-
