@@ -20,7 +20,7 @@ namespace Supervisor
                 Response.Redirect("sefue.aspx");
             }
 
-            switch(int.Parse(Request.QueryString["Variable"]))
+            switch (int.Parse(Request.QueryString["Variable"]))
             {
                 case 5:
                     Boton_Ejercicio.Enabled = false;
@@ -36,9 +36,12 @@ namespace Supervisor
                     break;
             }
 
-            Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-            Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-            Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+            Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+            Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+            Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
         }
 
         protected void Volver_A_Consola_Click(object sender, EventArgs e)
@@ -78,6 +81,11 @@ namespace Supervisor
         protected void Boton_Videos_Click(object sender, EventArgs e)
         {
             if (Palabras_Claves.Text == string.Empty)
+            {
+                return;
+            }
+
+            if (Palabras_Claves.Text.Contains("\r"))
             {
                 return;
             }

@@ -12,7 +12,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     
     <link href="css/encabezado.css" rel="stylesheet" />
-<link href="css/insertar_ejercicio_administrador.css" rel="stylesheet">
+    <link href="css/insertar_ejercicio_administrador.css" rel="stylesheet">
 
     <title>Insertar Ejercicios</title>
 
