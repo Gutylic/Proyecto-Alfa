@@ -10,23 +10,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/permisos_supervisor.css" rel="stylesheet"/>
+    
+    <link href="css/permisos_supervisor.css" rel="stylesheet" />    
+
+    <link href="css/encabezado.css" rel="stylesheet" />
 
     <title>Permisos Administrativos</title>
 
     <script>
-
         function Confirmacion() {
-
             var seleccion = confirm("¿Está seguro de realizar la acción requerida?");
-
             if (!seleccion) {
                 alert("NO acepto la aplicar la opcion requerida");
                 location.reload(true);
             }
-
             return seleccion;
-
         }
     </script>
 
@@ -36,52 +34,69 @@
     
     <form id="form1" runat="server">
 
-        <div class="Container">
-            
-            <nav class="navbar navbar-fixed-top header fondo_encabezado">
-                <div class="container">
-                    <div class="row">   
-                        <div class="col-xs-4 administrador">
-                            <asp:Label ID="Etiqueta_Administrador" runat="server" Text=""></asp:Label>
+        <div class="container">
+               
+           <nav class="navbar navbar-fixed-top header fondo_encabezado">
+ 	            <div class="container"> 
+                                         
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs administrador" >
+                            <asp:Label ID="Administrador_chico" runat="server" Text="">Adm:</asp:Label>
+                            <asp:Label ID="Etiqueta_Administrador_Chico" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
                         </div>
-                        <div class="col-xs-4 consola_de_control">
+                        <div class="col-xs-12 hidden-xs administrador">
+                            <asp:Label ID="Administrador_grande" runat="server" Text="">Administrador:</asp:Label>
+                            <asp:Label ID="Etiqueta_Administrador_Grande" CssClass ="etiqueta_administrador_grande" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 visible-xs ip chico">
+                            <asp:Label ID="Localizador_chico" runat="server">Conectado:</asp:Label>
+                            <asp:Label ID="Etiqueta_Localizador_Chico" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="col-xs-4 hidden-xs ip chico">
+                            <asp:Label ID="Localizador_Grande" runat="server">Conectado:</asp:Label>
+                            <asp:Label ID="Etiqueta_Localizador_Grande" CssClass ="etiqueta_administrador_chico" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="col-xs-4 consola_de_control" style="text-align:center; ">
                             <h1 class="titulo">Permisos</h1>
-                        </div> 
+                        </div>
                         <div class="col-xs-4 cerrar_session">                             
                             <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click"><< Volver</asp:LinkButton>
-                        </div>                         
-                    </div>                  
-                    <div class="row">
-                        <div class="col-xs-4 ip">
-                            <asp:Label ID="Etiqueta_Localizador" runat="server" ></asp:Label>
                         </div>
-                        <div class="col-xs-4"></div>
-                        <div class="col-xs-4"></div>                                             
                     </div>
                     <div class="row">
-                        <div class="col-xs-4 hora"><asp:Label ID="Etiqueta_Hora" runat="server" ></asp:Label></div>
-                        <div class="col-xs-4"></div>
-                        <div class="col-xs-4"></div>
+                        <div class="col-xs-12 visible-xs hora_chica_num" >
+                            <asp:Label ID="Hora_chico" runat="server" >Hora:</asp:Label>
+                            <asp:Label ID="Etiqueta_Hora_Chica" runat="server" ></asp:Label>
+                        </div>
+                        <div class="col-xs-12 hidden-xs hora_grande" >
+                            <asp:Label ID="Hora_grande" runat="server" >Hora de Conexión:</asp:Label>
+                            <asp:Label ID="Etiqueta_Hora_Grande" runat="server" ></asp:Label>
+                        </div>
                     </div>
                 </div>
-            </nav>
-            <div class="navbar navbar-default" id="subnav">
-                <div class="col-xs-12"></div>	
-            </div>
-            </div>
+             </nav> 
+        
+        </div>  
+
+        <div class="navbar navbar-default" id="subnav">
+            <div class="col-md-12"></div>	
+        </div>
+        
             <div class="container" id="main">
 
                 <div class="row">
 
                     <div class="col-xs-12 col-sm-6 col-md-8">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4>Administrador</h4></div>
-   			                <div class="panel-body">                           
+                            <div class="panel-heading" ><h4>Administrador</h4></div>
+   			                <div class="panel-body primero">                           
                                 <div class="col-xs-4 col-sm-4 col-md-4">                         
-                                    <asp:TextBox ID="Nik_Del_Administrador" placeholder="Ingrese el Nick del Administrador" style="padding-left:3px" runat="server" Height="36px" Width="100%"></asp:TextBox>
+                                    <asp:TextBox ID="Nik_Del_Administrador" placeholder="Nick" runat="server" Width="100%"></asp:TextBox>
                                 </div>
                                 <div class="col-xs-4 col-sm-4 col-md-4">
-                                    <asp:Button ID="Boton_De_Buscar" runat="server" Width="100%" Text="Ingresar Administrador" CssClass="btn btn-success" OnClick="Boton_De_Buscar_Click" />
+                                    <asp:Button ID="Boton_De_Buscar" runat="server" Width="100%" Text="Cargar" CssClass="btn btn-success" OnClick="Boton_De_Buscar_Click" />
                                 </div>  
                                 <div class="col-xs-4 col-sm-4 col-md-4">
                                     <asp:Button ID="Boton_De_Actualizar" OnClientClick="return Confirmacion();" runat="server" Width="100%" Text="Actualizar" CssClass="btn btn-danger" OnClick="Boton_De_Actualizar_Click" />
@@ -174,6 +189,51 @@
 
                     </div>
 
+                    <div class="col-sm-6 visible-sm hidden-lg hidden-xs hidden-md">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h4>Área de Consultas</h4></div>
+   			                <div class="panel-body">
+                                   <div class="row" style="text-align:center">
+                                        <h5 style="color:maroon">Movimiento de Usuarios</h5>
+                                        <asp:DropDownList ID="DropDownList1" runat="server" Height="36px">
+                                            <asp:ListItem Value ="0">Búscar (de un solo usuario)</asp:ListItem>
+                                            <asp:ListItem Value ="5">Mostrar (todos los usuarios)</asp:ListItem>
+                                            <asp:ListItem Value ="8">Excel</asp:ListItem>
+                                            <asp:ListItem Value ="9">Borrar movimiento</asp:ListItem>
+                                        </asp:DropDownList>  
+
+                                   </div>
+                                    <div class="row" style="text-align:center">
+                                        
+                                        <h5 style="color:maroon">Comprar Ejercicio</h5>
+                                        <asp:DropDownList ID="DropDownList2" runat="server" Height="36px">
+                                            <asp:ListItem Value="0">Mostrar las compras</asp:ListItem>
+                                            <asp:ListItem Value="5">Buscar las compras</asp:ListItem>  
+                                            <asp:ListItem Value="8">Insertar, actualizar, borrar, excel</asp:ListItem>   
+                                                                                   
+                                        </asp:DropDownList>  
+                                    </div>
+                                   
+                                   
+                                    <div class="row" style="text-align:center">
+                                        <h5 style="color:maroon">Comprar Explicaciones</h5>
+                                        <asp:DropDownList ID="DropDownList3" runat="server" Height="36px">
+                                            <asp:ListItem Value="0">Mostrar las compras</asp:ListItem>
+                                            <asp:ListItem Value="5">Buscar las compras</asp:ListItem>  
+                                            <asp:ListItem Value="8">Insertar, actualizar, borrar, excel</asp:ListItem>   
+                                                                                   
+                                        </asp:DropDownList>    
+
+                                   </div>  
+                                   
+                                                                                     
+                            </div>
+                            
+   		                </div>
+
+                    </div>
+
                     <div class="col-xs-12 col-sm-6 col-md-4">
 
                          <div class="panel panel-default">
@@ -218,41 +278,8 @@
 
 
                 <div class="row">
-
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading"><h4>Área de Usuarios</h4></div>
-   			                <div class="panel-body">
-                                   <div class="row" style="text-align:center">
-                                        <h5 style="color:maroon">Panel de Usuarios</h5>
-                                        <asp:DropDownList ID="DropDownList_Panel_Usuarios" runat="server" Height="36px">
-                                            <asp:ListItem Value="0">Ningúno</asp:ListItem>
-                                            <asp:ListItem Value="1">Búscar (de un solo usuario)</asp:ListItem>
-                                            <asp:ListItem Value="5">Mostrar (todos los usuarios)</asp:ListItem>
-                                            <asp:ListItem Value="6">Insertar usuario</asp:ListItem>
-                                            <asp:ListItem Value="9">Insertar, actualizar, borrar, excel</asp:ListItem>
-                                        </asp:DropDownList>  
-
-                                   </div>
-                                    <div class="row" style="text-align:center">
-                                        <h5 style="color:maroon">Comentario de Usuarios</h5>
-                                        <asp:DropDownList ID="DropDownList_Comentario_Usuario" runat="server" Height="36px">
-                                            <asp:ListItem Value ="0">Leer comentario</asp:ListItem>
-                                            <asp:ListItem Value ="5">Leer y Borrar comentarios</asp:ListItem>
-                                           
-                                        </asp:DropDownList>  
-
-                                   </div>
-                                   
-                                                                               
-                            </div>
-                            
-   		                </div>
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-4">
+                    
+                    <div class="col-xs-12 col-md-4 hidden-sm">
 
                         <div class="panel panel-default">
                             <div class="panel-heading"><h4>Área de Consultas</h4></div>
@@ -335,6 +362,39 @@
 
                     </div>
 
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h4>Área de Usuarios</h4></div>
+   			                <div class="panel-body">
+                                   <div class="row" style="text-align:center">
+                                        <h5 style="color:maroon">Panel de Usuarios</h5>
+                                        <asp:DropDownList ID="DropDownList_Panel_Usuarios" runat="server" Height="36px">
+                                            <asp:ListItem Value="0">Ningúno</asp:ListItem>
+                                            <asp:ListItem Value="1">Búscar (de un solo usuario)</asp:ListItem>
+                                            <asp:ListItem Value="5">Mostrar (todos los usuarios)</asp:ListItem>
+                                            <asp:ListItem Value="6">Insertar usuario</asp:ListItem>
+                                            <asp:ListItem Value="9">Insertar, actualizar, borrar, excel</asp:ListItem>
+                                        </asp:DropDownList>  
+
+                                   </div>
+                                    <div class="row" style="text-align:center">
+                                        <h5 style="color:maroon">Comentario de Usuarios</h5>
+                                        <asp:DropDownList ID="DropDownList_Comentario_Usuario" runat="server" Height="36px">
+                                            <asp:ListItem Value ="0">Leer comentario</asp:ListItem>
+                                            <asp:ListItem Value ="5">Leer y Borrar comentarios</asp:ListItem>
+                                           
+                                        </asp:DropDownList>  
+
+                                   </div>
+                                   
+                                                                               
+                            </div>
+                            
+   		                </div>
+
+                    </div>
+
               </div>   
 
 
@@ -347,10 +407,10 @@
             <footer>
                 <div class=" container">
                     <div class="row">
-                        <div class="col-xs-6">
-                            <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
+                        <div class="col-xs-12">
+                            <h6 class="pie">Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
                         </div>
-                        <div class="col-xs-6"></div>
+                        
                     </div>
                 </div>
             </footer>
@@ -368,4 +428,3 @@
 
 </body>
 </html>
-

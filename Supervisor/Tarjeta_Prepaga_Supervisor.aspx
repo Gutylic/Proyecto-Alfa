@@ -123,7 +123,7 @@
                                         <cc1:CalendarExtender ID="Buscar_Supervisor_Fecha_CalendarExtender" runat="server" BehaviorID="Buscar_Supervisor_Fecha_CalendarExtender" TargetControlID="Buscar_Supervisor_Fecha">
                                         </cc1:CalendarExtender>
                                         
-                                        <asp:DropDownList ID="DropDownList_Buscar_Supervisor" Visible="false" runat="server" Width="100%" Height="36px">
+                                        <asp:DropDownList ID="DropDownList_Buscar_Supervisor" Visible="false" runat="server" Width="100%" >
                                             <asp:ListItem Value ="false">Falso</asp:ListItem>
                                             <asp:ListItem Value ="true">Verdadero</asp:ListItem> 
                                         </asp:DropDownList>         
@@ -257,21 +257,21 @@
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label formulario">¿Cantidad de Tarjetas a Crear?</label>
                                         <div class="col-sm-8">
-                                            <asp:TextBox ID="Cantidad_Tarjeta" Height="36px" Width="100%" runat="server"></asp:TextBox> 
+                                            <asp:TextBox ID="Cantidad_Tarjeta" Width="100%" style= "margin-bottom:5px" runat="server"></asp:TextBox> 
                                             <cc1:FilteredTextBoxExtender ID="Cantidad_Solo_Numeros" runat="server" FilterType="Numbers" TargetControlID="Cantidad_Tarjeta" />                
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label formulario">Credito de las Tarjetas</label>
                                         <div class="col-sm-8">
-                                            <asp:TextBox ID="Credito_Tarjeta" Height="36px" Width="100%" runat="server"></asp:TextBox>   
+                                            <asp:TextBox ID="Credito_Tarjeta" Width="100%" style= "margin-bottom:5px" runat="server"></asp:TextBox>   
                                             <cc1:FilteredTextBoxExtender ID="Credito_Solo_Numeros" runat="server" FilterType="Numbers" TargetControlID="Credito_Tarjeta" />                                             
                                         </div>
                                     </div>                                      
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label formulario">Fecha De Vencimiento</label>
                                         <div class="col-sm-8">
-                                            <asp:TextBox ID="Caducidad_Tarjeta" runat="server" Width="100%" Height="36px" ></asp:TextBox>
+                                            <asp:TextBox ID="Caducidad_Tarjeta" runat="server" Width="100%" style= "margin-bottom:5px" ></asp:TextBox>
                                            
                                             <cc1:CalendarExtender ID="Caducidad_Tarjeta_CalendarExtender" runat="server" BehaviorID="Caducidad_Tarjeta_CalendarExtender" TargetControlID="Caducidad_Tarjeta">
                                             </cc1:CalendarExtender>
@@ -282,12 +282,12 @@
                                                  
                             </div>
                             
-                            <div class="panel-footer pie_formulario" style="height:55px">
+                            <div class="panel-footer pie_formulario">
                                 <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                     <ContentTemplate>--%>
                                         
                                         <div class="col-xs-12 boton_formulario">
-                                            <asp:Button ID="Boton_Crear_Supervisor" Width="100%" CssClass="btn btn-danger " runat="server" Text="Crear Tarjetas" OnClick="Boton_Crear_Supervisor_Click" />
+                                            <asp:Button ID="Boton_Crear_Supervisor" Width="100%" CssClass="btn btn-danger btn_formulario" runat="server" Text="Crear Tarjetas" OnClick="Boton_Crear_Supervisor_Click" />
                                         </div>
                                         
                                    
@@ -302,10 +302,10 @@
             <footer>
                 <div class=" container">
                     <div class="row">
-                        <div class="col-xs-6">
+                        <div class="col-xs-12">
                             <h6>Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
                         </div>
-                    <div class="col-xs-6"></div>
+                    
                     </div>
                 </div>
             </footer>

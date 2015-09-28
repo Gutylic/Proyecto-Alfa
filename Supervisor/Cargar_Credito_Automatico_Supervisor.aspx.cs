@@ -25,11 +25,15 @@ namespace Supervisor
             if (Session["Administrador"] == null || Session["www"] == null)
             {
                 Response.Redirect("sefue.aspx");
-            }           
+            }
 
-            Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-            Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-            Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+            Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+            Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+            Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
+
 
         }
 
@@ -107,166 +111,166 @@ namespace Supervisor
 
                 return;
             }
-            
-
-                StreamReader reader = new StreamReader(resp.GetResponseStream());
-
-                string HTML = reader.ReadToEnd();
-
-                string[] nombre_de_archivo = HTML.Split('&');
 
 
-                string[] etiqueta_1 = nombre_de_archivo[0].Split('=');
-                string[] etiqueta_2 = nombre_de_archivo[4].Split('=');
+            StreamReader reader = new StreamReader(resp.GetResponseStream());
 
-                string[] fecha = etiqueta_2[1].Split('+');
-                string[] dia = fecha[2].Split('%');
+            string HTML = reader.ReadToEnd();
 
-                switch (fecha[1])
+            string[] nombre_de_archivo = HTML.Split('&');
+
+
+            string[] etiqueta_1 = nombre_de_archivo[0].Split('=');
+            string[] etiqueta_2 = nombre_de_archivo[4].Split('=');
+
+            string[] fecha = etiqueta_2[1].Split('+');
+            string[] dia = fecha[2].Split('%');
+
+            switch (fecha[1])
+            {
+
+                case "Jan":
+                    fecha[1] = "01";
+                    break;
+
+                case "Feb":
+
+                    fecha[1] = "02";
+                    break;
+
+                case "Mar":
+                    fecha[1] = "03";
+                    break;
+
+                case "Apr":
+
+                    fecha[1] = "04";
+                    break;
+
+                case "May":
+                    fecha[1] = "05";
+                    break;
+
+                case "Jun":
+
+                    fecha[1] = "06";
+                    break;
+
+                case "Jul":
+                    fecha[1] = "07";
+                    break;
+
+                case "Agu":
+
+                    fecha[1] = "08";
+                    break;
+
+                case "Sep":
+                    fecha[1] = "09";
+                    break;
+
+                case "Oct":
+
+                    fecha[1] = "10";
+                    break;
+
+                case "Nov":
+                    fecha[1] = "11";
+                    break;
+
+                case "Dec":
+
+                    fecha[1] = "12";
+                    break;
+            }
+
+
+            string[] etiqueta_3 = nombre_de_archivo[26].Split('=');
+
+            string[] moneda = etiqueta_1[1].Split('.');
+
+            XElement pago = new XElement("pago");
+
+            XElement etiqueta_secundaria = new XElement("fecha");
+            etiqueta_secundaria.Add(dia[0] + fecha[1] + fecha[3]);
+            pago.Add(etiqueta_secundaria);
+
+            XElement etiqueta_tercearia = new XElement("monto_bruto");
+            etiqueta_tercearia.Add(moneda[0]);
+            pago.Add(etiqueta_tercearia);
+
+            XElement etiqueta_cuartaria = new XElement("usuario");
+            etiqueta_cuartaria.Add(etiqueta_3[1]);
+            pago.Add(etiqueta_cuartaria);
+
+            xml.Add(pago);
+
+            if (!File.Exists("c:\\pagos/PayPal/" + PayPal_Supervisor.Text + ".xml"))
+            {
+
+                xml.Save("c:\\pagos/PayPal/" + PayPal_Supervisor.Text + ".xml");
+
+            }
+            else
+            {
+
+                string script = @"<script type='text/javascript'>
+                                alert('El identificador que usted requiere ya fue cargado');
+                                </script>";
+
+                ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "alerta", script, false);
+
+                return;
+
+
+            }
+
+            XDocument doc = XDocument.Load("c:\\pagos/PayPal/" + PayPal_Supervisor.Text + ".xml");
+
+            var query = from m in doc.Descendants("pago")
+                        select new valores
+                        {
+                            fecha = m.Element("fecha").Value,
+                            monto = Convert.ToDecimal(m.Element("monto_bruto").Value),
+                            usuario = m.Element("usuario").Value,
+                        };
+
+            List<valores> Tabla = query.ToList<valores>();
+
+            foreach (valores m in Tabla)
+            {
+
+                int? ID_Usuario = LBCAS.Logica_Conversion_Uausrio_A_Identificador(m.usuario);
+                if (LBCAS.Logica_Ofertas_Habilitadas_7_O_2((int)Session["Variable_ID_Empresa"], "Oferta_7") == 1)
                 {
+                    Premio_1 = LBCAS.Logica_Oferta_Proxima_Recarga(ID_Usuario, (int)Session["Variable_ID_Empresa"], m.monto, true, "Automatico");
 
-                    case "Jan":
-                        fecha[1] = "01";
-                        break;
-
-                    case "Feb":
-
-                        fecha[1] = "02";
-                        break;
-
-                    case "Mar":
-                        fecha[1] = "03";
-                        break;
-
-                    case "Apr":
-
-                        fecha[1] = "04";
-                        break;
-
-                    case "May":
-                        fecha[1] = "05";
-                        break;
-
-                    case "Jun":
-
-                        fecha[1] = "06";
-                        break;
-
-                    case "Jul":
-                        fecha[1] = "07";
-                        break;
-
-                    case "Agu":
-
-                        fecha[1] = "08";
-                        break;
-
-                    case "Sep":
-                        fecha[1] = "09";
-                        break;
-
-                    case "Oct":
-
-                        fecha[1] = "10";
-                        break;
-
-                    case "Nov":
-                        fecha[1] = "11";
-                        break;
-
-                    case "Dec":
-
-                        fecha[1] = "12";
-                        break;
                 }
-
-
-                string[] etiqueta_3 = nombre_de_archivo[26].Split('=');
-
-                string[] moneda = etiqueta_1[1].Split('.');
-
-                XElement pago = new XElement("pago");
-
-                XElement etiqueta_secundaria = new XElement("fecha");
-                etiqueta_secundaria.Add(dia[0] + fecha[1] + fecha[3]);
-                pago.Add(etiqueta_secundaria);
-
-                XElement etiqueta_tercearia = new XElement("monto_bruto");
-                etiqueta_tercearia.Add(moneda[0]);
-                pago.Add(etiqueta_tercearia);
-
-                XElement etiqueta_cuartaria = new XElement("usuario");
-                etiqueta_cuartaria.Add(etiqueta_3[1]);
-                pago.Add(etiqueta_cuartaria);
-
-                xml.Add(pago);
-
-                if (!File.Exists("c:\\pagos/PayPal/" + PayPal_Supervisor.Text + ".xml"))
+                if (LBCAS.Logica_Ofertas_Habilitadas_7_O_2((int)Session["Variable_ID_Empresa"], "Oferta_2") == 1)
                 {
-
-                    xml.Save("c:\\pagos/PayPal/" + PayPal_Supervisor.Text + ".xml");
+                    Premio_2 = LBCAS.Logica_Oferta_Por_Carga(ID_Usuario, (int)Session["Variable_ID_Empresa"], m.monto, "Automatico");
 
                 }
                 else
                 {
-
-                    string script = @"<script type='text/javascript'>
-                                alert('El identificador que usted requiere ya fue cargado');
-                                </script>";
-
-                    ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "alerta", script, false);
-
-                    return;
-
-
+                    Premio_2 = 0;
                 }
 
-                XDocument doc = XDocument.Load("c:\\pagos/PayPal/" + PayPal_Supervisor.Text + ".xml");
+                LBCAS.Logica_Insetar_Carga_Automatica(m.monto * decimal.Parse(Conversion_Dolares_A_Pesos.Text), ID_Usuario, 15, Premio_1, Premio_2);
 
-                var query = from m in doc.Descendants("pago")
-                            select new valores
-                            {
-                                fecha = m.Element("fecha").Value,
-                                monto = Convert.ToDecimal(m.Element("monto_bruto").Value),
-                                usuario = m.Element("usuario").Value,
-                            };
+            }
 
-                List<valores> Tabla = query.ToList<valores>();
-
-                foreach (valores m in Tabla)
-                {
-
-                    int? ID_Usuario = LBCAS.Logica_Conversion_Uausrio_A_Identificador(m.usuario);
-                    if (LBCAS.Logica_Ofertas_Habilitadas_7_O_2((int)Session["Variable_ID_Empresa"], "Oferta_7") == 1)
-                    {
-                        Premio_1 = LBCAS.Logica_Oferta_Proxima_Recarga(ID_Usuario, (int)Session["Variable_ID_Empresa"], m.monto, true, "Automatico");
-
-                    }
-                    if (LBCAS.Logica_Ofertas_Habilitadas_7_O_2((int)Session["Variable_ID_Empresa"], "Oferta_2") == 1)
-                    {
-                        Premio_2 = LBCAS.Logica_Oferta_Por_Carga(ID_Usuario, (int)Session["Variable_ID_Empresa"], m.monto, "Automatico");
-
-                    }
-                    else
-                    {
-                        Premio_2 = 0;
-                    }
-
-                    LBCAS.Logica_Insetar_Carga_Automatica(m.monto * decimal.Parse(Conversion_Dolares_A_Pesos.Text), ID_Usuario, 15, Premio_1, Premio_2);
-
-                }
-
-                string confirmacion_1 = @"<script type='text/javascript'>
+            string confirmacion_1 = @"<script type='text/javascript'>
                                 alert('Los datos fueron cargados satisfactoriamente');
                                 </script>";
 
-                ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "alerta", confirmacion_1, false);
+            ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "alerta", confirmacion_1, false);
 
-                PayPal_Supervisor.Text = "";
+            PayPal_Supervisor.Text = "";
 
-                return;
-            
-            
+            return;
+
+
         }
 
         protected void Button_MercadoPago_Supervisor_Click(object sender, EventArgs e)
@@ -419,7 +423,7 @@ namespace Supervisor
 
             return;
         }
-        
+
 
         protected void Boton_Cuenta_Digital_Supervisor_Click(object sender, EventArgs e)
         {
@@ -428,13 +432,13 @@ namespace Supervisor
                 Convert.ToDateTime(Cuenta_Digital_Supervisor.Text);
             }
             catch
-            { 
+            {
                 string confirmacion1 = @"<script type='text/javascript'>
                                 alert('Algunos datos ingresados no tienen la forma permitida');
                                 </script>";
 
                 ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "alerta", confirmacion1, false);
-                              
+
                 return;
             }
             string fecha = Cuenta_Digital_Supervisor.Text;
@@ -465,7 +469,7 @@ namespace Supervisor
             }
 
             string url = LBCAS.Obtener_URL_Cuenta_Digital((int)Session["Variable_ID_Empresa"]) + registro;
-           
+
 
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
 
@@ -525,7 +529,7 @@ namespace Supervisor
             if (!File.Exists("c:\\pagos/Cuenta_Digital/" + (string)Session["Empresa"] + nombre_de_archivo[0] + ".xml"))
             {
 
-                xml.Save("c:\\pagos/Cuenta_Digital/" + (string)Session["Empresa"] +  nombre_de_archivo[0] + ".xml");
+                xml.Save("c:\\pagos/Cuenta_Digital/" + (string)Session["Empresa"] + nombre_de_archivo[0] + ".xml");
 
             }
             else

@@ -22,13 +22,76 @@ namespace Supervisor {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control Etiqueta_Administrador.
+        /// Control Administrador_chico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Etiqueta_Administrador;
+        protected global::System.Web.UI.WebControls.Label Administrador_chico;
+        
+        /// <summary>
+        /// Control Etiqueta_Administrador_Chico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Administrador_Chico;
+        
+        /// <summary>
+        /// Control Administrador_grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Administrador_grande;
+        
+        /// <summary>
+        /// Control Etiqueta_Administrador_Grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Administrador_Grande;
+        
+        /// <summary>
+        /// Control Localizador_chico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Localizador_chico;
+        
+        /// <summary>
+        /// Control Etiqueta_Localizador_Chico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Localizador_Chico;
+        
+        /// <summary>
+        /// Control Localizador_Grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Localizador_Grande;
+        
+        /// <summary>
+        /// Control Etiqueta_Localizador_Grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Localizador_Grande;
         
         /// <summary>
         /// Control Volver_A_Consola.
@@ -40,22 +103,40 @@ namespace Supervisor {
         protected global::System.Web.UI.WebControls.LinkButton Volver_A_Consola;
         
         /// <summary>
-        /// Control Etiqueta_Localizador.
+        /// Control Hora_chico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Etiqueta_Localizador;
+        protected global::System.Web.UI.WebControls.Label Hora_chico;
         
         /// <summary>
-        /// Control Etiqueta_Hora.
+        /// Control Etiqueta_Hora_Chica.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Etiqueta_Hora;
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Hora_Chica;
+        
+        /// <summary>
+        /// Control Hora_grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Hora_grande;
+        
+        /// <summary>
+        /// Control Etiqueta_Hora_Grande.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiqueta_Hora_Grande;
         
         /// <summary>
         /// Control Nik_Del_Administrador.
@@ -148,6 +229,33 @@ namespace Supervisor {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList_Respuestas;
         
         /// <summary>
+        /// Control DropDownList1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        
+        /// <summary>
+        /// Control DropDownList2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        
+        /// <summary>
+        /// Control DropDownList3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        
+        /// <summary>
         /// Control DropDownList_Tarjetas.
         /// </summary>
         /// <remarks>
@@ -173,24 +281,6 @@ namespace Supervisor {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList_Carga_Automatica;
-        
-        /// <summary>
-        /// Control DropDownList_Panel_Usuarios.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Panel_Usuarios;
-        
-        /// <summary>
-        /// Control DropDownList_Comentario_Usuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Comentario_Usuario;
         
         /// <summary>
         /// Control DropDownList_Movimiento.
@@ -245,5 +335,23 @@ namespace Supervisor {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList_Valor_De_Ofertas;
+        
+        /// <summary>
+        /// Control DropDownList_Panel_Usuarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Panel_Usuarios;
+        
+        /// <summary>
+        /// Control DropDownList_Comentario_Usuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Comentario_Usuario;
     }
 }

@@ -166,34 +166,34 @@
                             <div class="panel-body">
                                 <form class="form-horizontal">
                                     <div class="form-group">
-                                        <div class="col-xs-3">
+                                        <div class="col-sm-3 col-xs-12">
                                             <label class=" control-label formulario">Usuario:</label>
                                         </div>
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-9 col-xs-12">
                                             <asp:Label ID="Usuario_Supervisor"  Width="100%" MaxLength="10" runat="server"></asp:Label>                                              
                                         </div>
                                     </div>                                    
                                     <div class="form-group">
-                                        <div class="col-xs-3">
+                                        <div class="col-sm-3 col-xs-12">
                                             <label class=" control-label formulario">Correo:</label>
                                         </div>
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-9 col-xs-12">
                                             <asp:Label MaxLength="30" ID="Correo_Supervisor" runat="server" Width="100%" ></asp:Label>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-xs-3">
+                                        <div class="col-sm-3 col-xs-12">
                                             <label class="control-label formulario">Crédito:</label>
                                         </div>
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-9 col-xs-12">
                                             <asp:TextBox ID="Credito_Supervisor" Width="100%" runat="server"></asp:TextBox>                                        
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-xs-3">
+                                        <div class="col-sm-3 col-xs-12">
                                             <label class=" control-label formulario">Carga</label>
                                         </div>
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-9 col-xs-12">
                                              <asp:DropDownList ID="DropDownList_Carga" runat="server" >                            
                                                 <asp:ListItem Value ="13">No Resolucion</asp:ListItem>
                                                 <asp:ListItem Value ="16">Rapipago</asp:ListItem>

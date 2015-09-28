@@ -20,9 +20,13 @@ namespace Supervisor
                 Response.Redirect("sefue.aspx");
             }
 
-            Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-            Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-            Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+            Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+            Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+            Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
+
         }
 
         protected void Volver_A_Consola_Click(object sender, EventArgs e)
@@ -40,7 +44,7 @@ namespace Supervisor
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
                 return;
             }
-            
+
             int Valor = LBPS.Logica_Existencia_Del_Administrador(Nik_Del_Administrador.Text, (int)Session["Variable_ID_Empresa"]);
             if (Valor == 1)
             {
@@ -65,9 +69,9 @@ namespace Supervisor
                 DropDownList_Carga_Manual.SelectedValue = Datos[0].Categoria_G2.ToString();
                 DropDownList_Carga_Automatica.SelectedValue = Datos[0].Categoria_G3.ToString();
             }
-            else 
+            else
             {
-                string alerta = @"alert('El administrador seleccionado no existe');";               
+                string alerta = @"alert('El administrador seleccionado no existe');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
                 return;
             }
@@ -76,37 +80,37 @@ namespace Supervisor
 
         protected void Boton_De_Actualizar_Click(object sender, EventArgs e)
         {
-            
 
-                if (Nik_Del_Administrador.Text == string.Empty)
-                {
-                    return;
-                }
 
-                int Valor = LBPS.Logica_Actualizar_Categoria_De_Administradores(Nik_Del_Administrador.Text, (int)Session["Variable_ID_Empresa"], int.Parse(DropDownList_Panel_De_Control_Administrador.SelectedValue),
-                    int.Parse(DropDownList_Comentario_Administrador.SelectedValue), int.Parse(DropDownList_Control_Administrador.SelectedValue), int.Parse(DropDownList_Precios.SelectedValue),
-                    int.Parse(DropDownList_Activar_Ofertas.SelectedValue), int.Parse(DropDownList_Valor_De_Ofertas.SelectedValue), int.Parse(DropDownList_Permisos.SelectedValue),
-                    int.Parse(DropDownList_Panel_Usuarios.SelectedValue), int.Parse(DropDownList_Comentario_Usuario.SelectedValue), int.Parse(DropDownList_Movimiento.SelectedValue),
-                    int.Parse(DropDownList_Comprar_Ejercicios.SelectedValue), int.Parse(DropDownList_Comprar_Explicaciones.SelectedValue), int.Parse(DropDownList_Ejercicios.SelectedValue),
-                    int.Parse(DropDownList_Explicaciones.SelectedValue), int.Parse(DropDownList_Respuestas.SelectedValue), int.Parse(DropDownList_Tarjetas.SelectedValue),
-                    int.Parse(DropDownList_Carga_Manual.SelectedValue), int.Parse(DropDownList_Carga_Automatica.SelectedValue));
-                if (Valor == 1)
-                {
-                    string alerta = @"alert('Los permisos fueron modificados');";
-
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
-                    return;
-                }
-                else
-                {
-                    string alerta = @"alert('Los permisos no pudieron modificarse intentelo más tarde');";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
-                    return;
-                }
+            if (Nik_Del_Administrador.Text == string.Empty)
+            {
+                return;
             }
 
-            
-        
+            int Valor = LBPS.Logica_Actualizar_Categoria_De_Administradores(Nik_Del_Administrador.Text, (int)Session["Variable_ID_Empresa"], int.Parse(DropDownList_Panel_De_Control_Administrador.SelectedValue),
+                int.Parse(DropDownList_Comentario_Administrador.SelectedValue), int.Parse(DropDownList_Control_Administrador.SelectedValue), int.Parse(DropDownList_Precios.SelectedValue),
+                int.Parse(DropDownList_Activar_Ofertas.SelectedValue), int.Parse(DropDownList_Valor_De_Ofertas.SelectedValue), int.Parse(DropDownList_Permisos.SelectedValue),
+                int.Parse(DropDownList_Panel_Usuarios.SelectedValue), int.Parse(DropDownList_Comentario_Usuario.SelectedValue), int.Parse(DropDownList_Movimiento.SelectedValue),
+                int.Parse(DropDownList_Comprar_Ejercicios.SelectedValue), int.Parse(DropDownList_Comprar_Explicaciones.SelectedValue), int.Parse(DropDownList_Ejercicios.SelectedValue),
+                int.Parse(DropDownList_Explicaciones.SelectedValue), int.Parse(DropDownList_Respuestas.SelectedValue), int.Parse(DropDownList_Tarjetas.SelectedValue),
+                int.Parse(DropDownList_Carga_Manual.SelectedValue), int.Parse(DropDownList_Carga_Automatica.SelectedValue));
+            if (Valor == 1)
+            {
+                string alerta = @"alert('Los permisos fueron modificados');";
+
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
+                return;
+            }
+            else
+            {
+                string alerta = @"alert('Los permisos no pudieron modificarse intentelo más tarde');";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", alerta, true);
+                return;
+            }
+        }
+
+
+
 
     }
 

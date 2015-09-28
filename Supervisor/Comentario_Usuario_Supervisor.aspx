@@ -159,11 +159,11 @@
                                     </div>                                                                                
                                 </form>
                             </div>
-                             <div class="panel-footer pie_formulario" style="height:55px">
+                             <div class="panel-footer pie_formulario">
                                 <asp:UpdatePanel ID="UpdatePanel_Botonera" runat="server">
                                     <ContentTemplate>                                        
                                         <div class="col-xs-12">
-                                            <asp:Button ID="Boton_Borrar_Supervisor" Width="100%" CssClass="btn btn-danger" OnClientClick="return Confirmacion();" runat="server" Text="Borrar" OnClick="Boton_Borrar_Supervisor_Click" />
+                                            <asp:Button ID="Boton_Borrar_Supervisor" Width="100%" CssClass="btn btn-danger btn_formulario" OnClientClick="return Confirmacion();" runat="server" Text="Borrar" OnClick="Boton_Borrar_Supervisor_Click" />
                                         </div>                                        
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
