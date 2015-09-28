@@ -18,9 +18,7 @@ namespace Supervisor
             {
                 Response.Redirect("sefue.aspx");
             }
-            Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-            Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-            Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+            
 
 
             if (!Page.IsPostBack) // se carga la primera vez al abrir la pagina

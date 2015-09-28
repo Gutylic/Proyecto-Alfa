@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
-
     <link href="css/panel_de_control_supervisor.css" rel="stylesheet" />
+
     
     <link href="css/encabezado.css" rel="stylesheet" />
 
@@ -20,28 +20,22 @@
     <script>
         function validar_numero(e) {
             tecla = (document.all) ? e.keyCode : e.which;
-
             //Tecla de retroceso para borrar, siempre la permite
             if (tecla == 8) {
                 return true;
             }
-
             // Patron de entrada, en este caso solo acepta numeros
             patron = /[0-9]/;
             tecla_final = String.fromCharCode(tecla);
             return patron.test(tecla_final);
         }
         function Confirmacion() {
-
             var seleccion = confirm("¿Está seguro de realizar la acción requerida?");
-
             if (!seleccion) {
                 alert("NO acepto la aplicar la opcion requerida");
                 location.reload(true);
             }
-
             return seleccion;
-
         }
     </script>
         
@@ -66,6 +60,7 @@
                         <div class="col-xs-12 hidden-xs administrador">
                             <asp:Label ID="Administrador_grande" runat="server" Text="">Administrador:</asp:Label>
                             <asp:Label ID="Etiqueta_Administrador_Grande" CssClass ="etiqueta_administrador_grande" runat="server" Text=""></asp:Label>
+
                         </div>
                     </div>
                     <div class="row">
@@ -96,7 +91,7 @@
                     </div>
 
                 </div>
-             </nav> 
+            </nav> 
         
         </div>  
 
@@ -114,7 +109,9 @@
             <div class="row">
                 <div class="col-xs-12">       
                     <div class="panel panel-default">                             
+
                         <div class="encabezado_panel panel-heading fondo" style="text-align:center"><h2 class="datos_del_administrador">Administradores</h2>
+
                             <hr />
                             <div class="row">
                                 <div class="col-xs-6">
@@ -176,29 +173,37 @@
                         <div class="col-xs-12"> 
                             <div class="panel panel-warning">
                                 <div class="panel-heading" style="text-align:center"><h3 class="titulo_formulario">Formulario</h3></div>
-                                <div class="panel-body primero">
+
+                                <div class="panel-body">
                                     <form class="form-horizontal">
                                         <div class="form-group">
-                                            <label class="col-sm-2 col-xs-6 control-label formulario">Administrador:</label>
-                                            <div class="col-sm-10 col-xs-6 ">
+                                            <label class="col-xs-6 control-label formulario">Administrador:</label>
+                                            <div class="col-xs-6">
+
                                                 <asp:TextBox ID="Administrador_Supervisor" Width="100%"  runat="server"></asp:TextBox>      
                                             </div>
                                         </div>                                    
                                         <div class="form-group">
-                                            <label class="col-sm-2 col-xs-6 control-label formulario">Password:</label>
-                                            <div class="col-sm-10 col-xs-6">
+
+                                            <label class="col-xs-6 control-label formulario">Password:</label>
+                                            <div class="col-xs-6">
+
                                                 <asp:TextBox ID="Password_Supervisor" runat="server" Width="100%" MaxLength="10"></asp:TextBox>
                                             </div>
                                         </div>                                    
                                         <div class="form-group">
-                                            <label class="col-sm-2 col-xs-6  control-label formulario">Dirección IP:</label>
-                                            <div class="col-sm-10 col-xs-6 ">
+
+                                            <label class="col-xs-6 control-label formulario">Dirección IP:</label>
+                                            <div class="col-xs-6">
+
                                                 <asp:Label ID="IP_Supervisor" runat="server" Width="100%"></asp:Label>                                            
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-2 col-xs-6  control-label formulario">Bloqueado:</label>
-                                                <div class="col-sm-10 col-xs-6 ">
+
+                                            <label class="col-xs-6 control-label formulario">Bloqueado:</label>
+                                                <div class="col-xs-6 ">
+
                                                     <asp:CheckBox class="checkbox" ID="CheckBox_Bloqueo_Supervisor" runat="server" />                                                          
                                                 </div>
                                             
@@ -232,7 +237,9 @@
             <div class=" container">
                 <div class="row">
                     <div class="col-xs-12">
+
                         <h6 class="pie">Copyrigth®2015 - Webmaster Martina Ivana Romero</h6>
+
                     </div>                        
                 </div>
             </div>

@@ -108,7 +108,7 @@
                             <hr />
                                 <div class="row">
                                     <div class="col-sm-3 col-xs-4">
-                                        <asp:DropDownList ID="DropDownList_Dios" Width="100%" Height="36px" runat="server" AutoPostBack="true">                            
+                                        <asp:DropDownList ID="DropDownList_Dios" Width="100%"  runat="server" AutoPostBack="true">                            
                                             <asp:ListItem Value ="1">Elegir una opción</asp:ListItem>
                                             <asp:ListItem Value ="2">Administrador</asp:ListItem>                                              
                                             <asp:ListItem Value ="3">Empresa</asp:ListItem>     
@@ -116,12 +116,12 @@
                                         </asp:DropDownList>
                                     </div>                                    
                                     <div class="col-sm-7 col-xs-4">  
-                                        <asp:DropDownList ID="DropDownList_Buscar_Dios" Width="100%" Height="36px" runat="server" Visible="false">                            
+                                        <asp:DropDownList ID="DropDownList_Buscar_Dios" Width="100%"  runat="server" Visible="false">                            
                                             <asp:ListItem Value ="Ejercicios">Respuesta de Ejercicios</asp:ListItem>
                                             <asp:ListItem Value ="Videos">Busqueda de Videos</asp:ListItem> 
                                         </asp:DropDownList>
                                               
-                                        <asp:TextBox Visible="true" ID="Buscar_Dios" Width="100%" Height="36px" runat="server"></asp:TextBox>
+                                        <asp:TextBox Visible="true" ID="Buscar_Dios" Width="100%"  runat="server"></asp:TextBox>
                                     </div>
                                     <div class="col-sm-2 col-xs-4">
                                         <asp:Button ID="Boton_Buscar_Dios" runat="server" CssClass="btn btn-primary" Width="100%" Text="Buscar" OnClick="Boton_Buscar_Dios_Click" />
@@ -207,9 +207,11 @@
                             </div>
                              <div class="panel-footer pie_formulario">
                                 <asp:UpdatePanel ID="UpdatePanel_Botonera" runat="server">
-                                    <ContentTemplate>                                        
+
+                                    <ContentTemplate>
+                                                                                
                                         <div class="col-xs-12">
-                                            <asp:Button ID="Boton_Borrar_Dios" Width="100%" CssClass="btn btn-danger" OnClientClick="return Confirmacion();" runat="server" Text="Borrar" OnClick="Boton_Borrar_Dios_Click" />
+                                            <asp:Button ID="Boton_Borrar_Dios" Width="100%" CssClass="btn btn-danger btn_formulario" OnClientClick="return Confirmacion();" runat="server" Text="Borrar" OnClick="Boton_Borrar_Dios_Click" />
                                         </div>    
                                                                          
                                     </ContentTemplate>

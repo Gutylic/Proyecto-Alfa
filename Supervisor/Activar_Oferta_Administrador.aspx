@@ -50,7 +50,7 @@
                             <h1 class="titulo">Ofertas</h1>
                         </div>
                         <div class="col-xs-4 cerrar_session">                             
-                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click">X</asp:LinkButton>
+                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click"><< Volver</asp:LinkButton>
                         </div>
                     </div>
                     <div class="row">
@@ -80,6 +80,7 @@
                         <div class="panel-body">                
                             <div class="form-group otras_opciones">                            
                                 <asp:RadioButtonList CellSpacing="5" ID="RadioButtonList_Ofertas_Administrador" runat="server">
+                                    
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Bonificación por Carga" Value="2" Enabled="false" ></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Descuento en la Segunda Compra" Value="3" Enabled="false"></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Descuento en la Compra" Value = "5" Enabled="false"></asp:ListItem>
@@ -92,7 +93,10 @@
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Aumento en la Duración de la Compra" Value="13" Enabled="false"></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;2 x 1 en Impresiones" Value="14" Enabled="false" ></asp:ListItem>
                                     <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;2 x 1 en Explicaciones" Value = "15" Enabled="false"></asp:ListItem>
-                                    <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Sin Ofertas" Value = "16" ></asp:ListItem>
+
+                                    <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;Sin Ofertas" Value = "16"  Enabled="false"></asp:ListItem>
+
+
                                 </asp:RadioButtonList>                                                                                                 
                             </div>
                             <div class="form-group otras_opciones" >

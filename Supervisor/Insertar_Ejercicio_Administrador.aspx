@@ -12,7 +12,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     
     <link href="css/encabezado.css" rel="stylesheet" />
-<link href="css/insertar_ejercicio_administrador.css" rel="stylesheet">
+<link href="css/insertar_ejercicio_administrador.css" rel="stylesheet"/>
 
     <title>Insertar Ejercicios</title>
 
@@ -55,7 +55,7 @@
                             <h1 class="titulo">Insertar</h1>
                         </div>
                         <div class="col-xs-4 cerrar_session">                             
-                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click">X</asp:LinkButton>
+                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click"><< Volver</asp:LinkButton>
                         </div>
                     </div>
                     <div class="row">

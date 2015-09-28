@@ -24,9 +24,12 @@ namespace Supervisor
             {
                 Response.Redirect("sefue.aspx");
             }
-            Etiqueta_Administrador.Text = "Administrador: " + ((string)Session["Administrador"]).ToUpper();
-            Etiqueta_Hora.Text = "Hora de Conexión: " + DateTime.Now;
-            Etiqueta_Localizador.Text = "Conectado desde: " + Request.UserHostAddress.ToString();
+            Etiqueta_Administrador_Chico.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Administrador_Grande.Text = ((string)Session["Administrador"]).ToUpper();
+            Etiqueta_Hora_Grande.Text = DateTime.Now.ToString();
+            Etiqueta_Hora_Chica.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            Etiqueta_Localizador_Grande.Text = Request.UserHostAddress.ToString();
+            Etiqueta_Localizador_Chico.Text = Request.UserHostAddress.ToString();
 
             Condiciones_Paginacion_Administrador();
             Mostrar_Datos_Administrador(0);
@@ -119,7 +122,7 @@ namespace Supervisor
             List<Seleccionar_Explicacion_Pedida_AdministardorResult> Datos = LBPEA.Logcia_Seleccionar_Explicacion((int)Session["ID_Consulta"]); // carga los datos del administrador elegido por el supervisor
             Etiqueta_Numero_De_Ejercicio_Administrador.Text = Datos[0].ID_Ejercicio.ToString();
             Etiqueta_Usuario_Administrador.Text = Datos[0].Usuario;
-            Etiqueta_Fecha_Administrador.Text = Datos[0].Fecha_De_Pedido.ToString();
+            Etiqueta_Fecha_Administrador.Text = Datos[0].Fecha_De_Pedido.ToString("dd/MM/yyyy HH:mm");
             TextBox_Administrador_Administrador.Text = Datos[0].Administrador;
             CheckBox_Realizado_Administrador.Checked = (bool)Datos[0].Realizado;
 

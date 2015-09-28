@@ -9,9 +9,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>    
     <link href="css/encabezado.css" rel="stylesheet" />
+    <link href="css/activar_oferta_supervisor.css" rel="stylesheet" />
 
     <title>Activar Ofertas</title>
 
@@ -100,8 +100,8 @@
                         <div class="panel panel-default">                             
                             <div class="encabezado_panel panel-heading fondo" style="text-align:center"><h2 class="datos_del_administrador">Ofertas</h2></div>   
                             <div class="panel-body">               
-                                
-                                        <div class="form-group">
+                                <div class="form-group otras_opciones">
+                                        
                                             
                                             <div style="background-color:whitesmoke">
                                                 <asp:RadioButtonList CellSpacing="5" ID="RadioButtonList_Ofertas_Supervisor"  runat="server">
@@ -124,20 +124,20 @@
                                                 </asp:RadioButtonList>                                                                                                
                                             </div>    
                                 </div>                                                                      
-                                            <div class="form-group">
+                                            <div class="form-group otras_opciones">
                                                 <asp:CheckBox ID="Bonificacion_Registro" Text="&nbsp;&nbsp;&nbsp;&nbsp;Bonificación por Registrarse" runat="server" />
                                                                                             
                                             </div>
-                                            <div class="form-group">
+                                            <div class="form-group otras_opciones">
                                                 <asp:CheckBox ID="Bonificacion_Por_Cantidad" Text="&nbsp;&nbsp;&nbsp;&nbsp;Bonificación por Ser Cliente Habitué" runat="server" />
                                                                                                
                                             </div>                                         
                                         </div>                                        
                                     
-                            <div class="panel-footer pie_formulario" style="height:55px">
+                            <div class="panel-footer pie_formulario" >
                                 
                                         <div class="col-xs-12 boton_formulario">
-                                            <asp:Button ID="Boton_Actualizar_Supervisor" OnClientClick="return Confirmacion();" Width="100%" CssClass="btn btn-warning " runat="server" Text="Actualizar" OnClick="Boton_Actualizar_Supervisor_Click" />
+                                            <asp:Button ID="Boton_Actualizar_Supervisor" OnClientClick="return Confirmacion();" Width="100%" CssClass="btn btn-warning btn_formulario" runat="server" Text="Actualizar" OnClick="Boton_Actualizar_Supervisor_Click" />
                                         </div>                                       
                                     
                             </div> 

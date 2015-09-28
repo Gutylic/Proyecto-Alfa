@@ -230,9 +230,9 @@
 
 
                                 </div>
-                            <div class="panel-footer" style="height:55px">
+                            <div class="panel-footer pie_formulario">
                                 <div class="col-xs-12">
-                                    <asp:Button ID="Boton_Borrar_Dios" runat="server" CssClass="btn btn-danger btn_formulario" OnClientClick="return Confirmacion();" Text="Borrar" Width="100%" Height="36px" OnClick="Boton_Borrar_Dios_Click" />
+                                    <asp:Button ID="Boton_Borrar_Dios" runat="server" CssClass="btn btn-danger btn_formulario" OnClientClick="return Confirmacion();" Text="Borrar" Width="100%" OnClick="Boton_Borrar_Dios_Click" />
                                 </div>
                             </div>
                         </div>

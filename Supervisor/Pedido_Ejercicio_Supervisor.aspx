@@ -11,9 +11,9 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/pedido_ejercicio_supervisor.css" rel="stylesheet"/>
-    
-    <title>Pedido Ejercicio Personalizado</title>
     <link href="css/encabezado.css" rel="stylesheet" />
+    <title>Pedido Ejercicio Personalizado</title>
+    
 
     <script>
 

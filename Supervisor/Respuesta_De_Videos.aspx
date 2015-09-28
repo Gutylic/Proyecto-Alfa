@@ -8,10 +8,10 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link href="css/encabezado.css" rel="stylesheet" />
+    
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/respuesta_de_ejercicios.css" rel="stylesheet"/>
-
+    <link href="css/encabezado.css" rel="stylesheet" />
     <title>Mostrar Videos</title>
 
 </head>

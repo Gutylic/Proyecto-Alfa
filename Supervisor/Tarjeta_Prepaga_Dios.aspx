@@ -217,7 +217,7 @@
                                 <asp:UpdatePanel ID="UpdatePanel_Botonera" runat="server">
                                     <ContentTemplate>                                        
                                         <div class="col-xs-12 boton_formulario">
-                                            <asp:Button ID="Boton_Borrar_Dios" CssClass="btn btn-danger" Width="100%" runat="server" Text="Borrar" OnClick="Boton_Borrar_Dios_Click" />
+                                            <asp:Button ID="Boton_Borrar_Dios" CssClass="btn btn-danger btn_formulario" Width="100%" runat="server" Text="Borrar" OnClick="Boton_Borrar_Dios_Click" />
                                         </div>
                                        
                                     </ContentTemplate>

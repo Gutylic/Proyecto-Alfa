@@ -1,137 +1,139 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400);
-body {
-  background-color:#e0e0e0;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
-}
-.navbar-default {background-color:#f4f4f4;margin-top:50px;border-width:0;z-index:5;}
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {border:0 solid #4285f4;border-bottom-width:2px;font-weight:800;background-color:transparent;}
-.navbar-default .dropdown-menu {background-color:#ffffff;}
+﻿h2.datos_del_administrador {
+        font-size: 12px;
+        margin-top: -1px;
+    }
+
+.encabezado_panel.panel-heading.fondo {
+        text-align: center;
+        height: 30px;
+    }
 
 
 
-.fondo {
-    color: #fff;
-    background-color: #6D4A70;
-    border-color: #ddd;
-}
-
-div.cerrar_session {
-    text-align:right;
-    margin-top:30px;
-
-}
+.gridview {
+        font-size:10px;
+    }
 
 
-#Volver_A_Consola {
-    font-weight: bolder;
-    font-size: 23px;
-    color: white;
-    margin-right: 100px;
-    text-decoration: none;
-}
 
-div.consola_de_control {
-    margin-top:6px;
+.cuerpo_del_panel {
+        padding: 0px;
+    }
 
-}
+    .panel-warning > .panel-heading {
+        height: 40px;
+    }
 
-div.ip {
-    margin-top:-27px;
-    color:white;
-}
+    h3.titulo_formulario {
+        font-size: 16px;
+        margin-top: 2px;
+    }
 
-div.hora {
-    margin-top:-8px;
-    color:white
-}
+    #Usuario_Administrador {
+        margin-bottom: 3px;
+        height: 25px;
+    }
 
-h1.titulo {
-    color:white;
-}
+    #Comentarios_Administrador {
+        margin-bottom: 3px;
+        height: 25px;
+    }
 
-div.administrador {
-    margin-top:23px;
-}
+    #Correo_Administrador {
+        margin-bottom: 3px;
+        height: 25px;
+    }
 
-#Etiqueta_Administrador {
-    color:white;
-    font-size:18px;
+.formulario {
+    margin-top:5px;
 
 }
 
-.fondo_encabezado {
-    background:#6D4A70;
-    height:92px;
-}
+th {
+        text-align: center;
+        padding: 1px;
+        font-weight: normal;
+    }
 
-hr {border-color:#ececec;}
-
-button {
- outline: 0;
-}
-
-textarea {
- resize: none;
- outline: 0; 
-}
+h6.pie {
+        margin-top: -10px;
+    }
 
 
 
 
 
-.modal-footer {
- border-width:0;
-}
-.dropdown-menu {
- background-color:#f4f4f4;
- border-color:#f0f0f0;
- border-radius:0;
- margin-top:-1px;
-}
-/* end theme */
+/*-------------------------------------------------------------media query 768 --------------------------------------------------------------*/
 
-/* template layout*/
-#subnav {
- position:fixed;
- width:100%;
-}
 
-@media (max-width: 768px) {
- #subnav {
-  padding-top: 6px;
- }
-}
+@media (min-width:768px) {
 
-#main {
- padding-top:120px;
+    h2.datos_del_administrador {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    .encabezado_panel.panel-heading.fondo {
+        text-align: center;
+        height: 35px;
+    }
+
+
+    .gridview {
+        font-size:12px;
+    }
+
+    h3.titulo_formulario {
+        font-size: 17px;
+        margin-top: 2px;
+    }
+
+    
 }
 
 
-h4.datos_del_administrador {
-    text-align:center;
 
+/*-------------------------------------------------------------media query 992 --------------------------------------------------------------*/
+
+
+@media (min-width:992px) {
+
+     h2.datos_del_administrador {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+     .encabezado_panel.panel-heading.fondo {
+        text-align: center;
+        height: 40px;
+    }
+
+     .gridview {
+        font-size:14px;
+    }
+
+    
 }
 
-.clases {
-    margin-top:20px;
-}
 
-#Etiqueta_Nombre {
-    margin-top:20px;
-    margin-left:23px;
-}
-#Etiqueta_Categoria {
-    margin-top:20px;
-    margin-left:23px;
-}
-#TextBox_Password {
-    padding-left:23px;
-    margin-top:10px;
-    width:100%;
-    height:36px;
-}
+/*-------------------------------------------------------------media query 1200 --------------------------------------------------------------*/
 
-div.encabezado_panel {
-    background-color:#4285F4;
+
+@media (min-width:1200px) {
+
+    h2.datos_del_administrador {
+        font-size: 18px;
+        margin-top: 7px;
+    }
+
+    .encabezado_panel.panel-heading.fondo {
+        text-align: center;
+        height: 45px;
+    }
+
+    .gridview {
+        font-size:16px;
+    }
+
+    
 }

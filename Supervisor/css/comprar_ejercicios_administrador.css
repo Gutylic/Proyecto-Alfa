@@ -1,137 +1,145 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400);
-body {
-  background-color:#e0e0e0;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
-}
-.navbar-default {background-color:#f4f4f4;margin-top:50px;border-width:0;z-index:5;}
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {border:0 solid #4285f4;border-bottom-width:2px;font-weight:800;background-color:transparent;}
-.navbar-default .dropdown-menu {background-color:#ffffff;}
-
-
-
-.fondo {
-    color: #fff;
-    background-color: #6D4A70;
-    border-color: #ddd;
-}
-
-div.cerrar_session {
-    text-align:right;
-    margin-top:30px;
+﻿.encabezado_panel.panel-heading.fondo {
+    text-align: center;
+    height: 63px;
 
 }
 
-
-#Volver_A_Consola {
-    font-weight: bolder;
-    font-size: 23px;
-    color: white;
-    margin-right: 100px;
-    text-decoration: none;
+hr {
+    border-color: #ececec;
+    margin-top: -5px;
+    margin-bottom: 5px;
 }
 
-div.consola_de_control {
-    margin-top:6px;
-
+h6.pie {
+    margin-top: -10px;
 }
 
-div.ip {
-    margin-top:-27px;
-    color:white;
+h2.datos_del_administrador {
+    font-size: 12px;
+    margin-top: -1px;
 }
 
-div.hora {
-    margin-top:-8px;
-    color:white
+input#Boton_Buscar_Administrador {
+    font-size: 10px;
+    margin-top: -2px;
+    height: 27px;
 }
 
-h1.titulo {
-    color:white;
+input#Buscar_Administrador {
+    font-size: 12px;
+    padding-left: 4px;
+    height: 27px;
+    width: 100%;
+    margin-top: -2px;
 }
 
-div.administrador {
-    margin-top:23px;
+.col-xs-6.buscar_administrador {
+    margin-top: -1px;
 }
 
-#Etiqueta_Administrador {
-    color:white;
-    font-size:18px;
-
+table#GridView_Administrador {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10px;
 }
-
-.fondo_encabezado {
-    background:#6D4A70;
-    height:92px;
-}
-
-hr {border-color:#ececec;}
-
-button {
- outline: 0;
-}
-
-textarea {
- resize: none;
- outline: 0; 
+th {
+    text-align: center;
 }
 
 
 
+/*-------------------------------------------------------------media query 768 --------------------------------------------------------------*/
 
 
-.modal-footer {
- border-width:0;
-}
-.dropdown-menu {
- background-color:#f4f4f4;
- border-color:#f0f0f0;
- border-radius:0;
- margin-top:-1px;
-}
-/* end theme */
+@media (min-width:768px) {
 
-/* template layout*/
-#subnav {
- position:fixed;
- width:100%;
+.encabezado_panel.panel-heading.fondo {
+    height: 75px;
 }
 
-@media (max-width: 768px) {
- #subnav {
-  padding-top: 6px;
- }
-}
+    hr {
+        margin-top: 7px;
+    }
 
-#main {
- padding-top:120px;
+    h2.datos_del_administrador {
+        font-size: 15px;
+    }  
+
+    input#Boton_Buscar_Administrador {
+    font-size: 12px;
+    margin-top: 2px;
 }
 
 
-h4.datos_del_administrador {
-    text-align:center;
+input#Buscar_Administrador {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+table#GridView_Administrador {
+   font-size: 12px;
+}
+
 
 }
 
-.clases {
-    margin-top:20px;
+/*-------------------------------------------------------------media query 992 --------------------------------------------------------------*/
+
+
+@media (min-width:992px) {
+.encabezado_panel.panel-heading.fondo {
+    height: 80px;
 }
 
-#Etiqueta_Nombre {
-    margin-top:20px;
-    margin-left:23px;
-}
-#Etiqueta_Categoria {
-    margin-top:20px;
-    margin-left:23px;
-}
-#TextBox_Password {
-    padding-left:23px;
-    margin-top:10px;
-    width:100%;
-    height:36px;
+    h2.datos_del_administrador {
+        font-size: 17px;
+    }  
+
+input#Boton_Buscar_Administrador {
+    font-size: 14px;
+    margin-top: 3px;
+    padding-top: 2px;
 }
 
-div.encabezado_panel {
-    background-color:#4285F4;
+input#Buscar_Administrador {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+table#GridView_Administrador {
+   font-size: 14px;
+}
+
+}
+
+/*-------------------------------------------------------------media query 1200 --------------------------------------------------------------*/
+
+
+@media (min-width:1200px) {
+
+.encabezado_panel.panel-heading.fondo {
+    height: 85px;
+}
+
+    h2.datos_del_administrador {
+        font-size: 17px;
+    } 
+     
+input#Boton_Buscar_Administrador {
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+input#Buscar_Administrador {
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+div#Formulario {
+padding:1px;
+height:36px;
+}
+
+
+
 }

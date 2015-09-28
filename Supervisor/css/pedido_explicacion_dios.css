@@ -97,6 +97,13 @@ h6.pie {
         height:20px;
     }
 
+.btn_formulario {
+        height: 25px;
+        margin-top: -3px;
+        font-size: 10px;
+        padding: 0px;
+    }
+
 @media(min-width:768px) {
       
     .formulario_check {
@@ -174,19 +181,19 @@ h6.pie {
         height: 44px;
     }
 
-    .btn_formulario {
-        height: 30px;
-        margin-top: -3px;
-        font-size: 12px;
-        padding: 0px;
-    }
+   
 
 
 }
 
 @media(min-width:992px) {
 
-    
+    .btn_formulario {
+        height: 35px;
+        margin-top: -3px;
+        font-size: 14px;
+        padding: 0px;
+    }
 
     h3.titulo_formulario {
         font-size: 17px;

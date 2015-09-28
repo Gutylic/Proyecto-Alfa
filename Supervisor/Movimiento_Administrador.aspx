@@ -57,7 +57,7 @@
                             <h1 class="titulo">Insertar</h1>
                         </div>
                         <div class="col-xs-4 cerrar_session">                             
-                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click">X</asp:LinkButton>
+                            <asp:LinkButton ID="Volver_A_Consola" ToolTip="Volver a Consola de Control" runat="server" OnClick="Volver_A_Consola_Click"><< Volver</asp:LinkButton>
                         </div>
                     </div>
                     <div class="row">
@@ -91,7 +91,7 @@
                                     <div class="col-xs-6 buscar_administrador">
                                         <asp:TextBox ID="Buscar_Administrador"  runat="server"></asp:TextBox>
                                     </div>
-                                    <div class="col-xs-6">
+                                    <div class="col-xs-6 boton_buscar_administrador">
                                         <asp:Button ID="Boton_Buscar_Administrador" runat="server" CssClass="btn btn-primary" Width="100%" Text="Buscar" OnClick="Boton_Buscar_Administrador_Click" />
                                     </div>
                                 </div>
